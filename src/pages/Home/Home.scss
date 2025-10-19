@@ -1,0 +1,72 @@
+@import '../../styles/abstracts/variables';
+
+.home {
+  background: $color-primary;
+  color: $color-text-primary;
+  max-width: $mobile;
+  margin: 0 auto;
+
+  // ===== NAVBAR =====
+  &__navbar {
+    width: 100%;
+    height: $navbar-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 16px 20px 16px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  // ===== HERO SECTION =====
+  &__hero {
+    width: 100%;
+    height: $hero-height;
+    padding: 80px 16px 0 16px;
+    border: 1px solid $color-border;
+    border-top: none;
+  }
+
+  // ===== CONTAINER SECTION =====
+  &__container {
+    width: 358px;
+    height: $container-height;
+    margin: 0 16px;
+    padding-top: 20px;
+    background: #24242433;
+    border: 1px solid $color-border;
+    border-top: none;
+  }
+
+  // ===== SERVICES SECTION =====
+  &__services {
+    width: 358px;
+    height: $services-height;
+    margin: 0 16px;
+    border: 1px solid $color-border;
+  }
+
+  // ===== WHY CHOOSE SECTION =====
+  &__why-choose {
+    width: 358px;
+    height: $why-choose-height;
+    margin: 0 16px;
+    border: 1px solid $color-border;
+  }
+
+  // ===== CONTACT SECTION =====
+  &__contact {
+    width: 358px;
+    height: $contact-height;
+    margin: 0 16px;
+    border: 1px solid $color-border;
+  }
+
+  // ===== FOOTER =====
+  &__footer {
+    width: 100%;
+    height: $footer-height;
+    padding: 30px 16px;
+    border-top: 1px solid $color-border;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,108 @@
+@import '../abstracts/variables';
+
+/* ===== MOBILE FIRST RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-base; // 16px base for mobile
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $color-text-primary;
+  background-color: $color-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== TYPOGRAPHY MOBILE FIRST ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: $font-size-3xl; // 30px on mobile
+  
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $font-size-4xl; // 36px on tablet+
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl; // 24px on mobile
+  
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $font-size-3xl; // 30px on tablet+
+  }
+}
+
+h3 {
+  font-size: $font-size-xl; // 20px on mobile
+  
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $font-size-2xl; // 24px on tablet+
+  }
+}
+
+p {
+  margin-bottom: $spacing-sm;
+  color: $color-text-secondary;
+  
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $font-size-lg; // 18px on tablet+
+  }
+}
+
+/* ===== LINKS & BUTTONS ===== */
+a {
+  color: $color-accent-blue;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $color-accent-purple;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+  list-style: none;
+}
+
+/* ===== MEDIA ===== */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== FOCUS ===== */
+:focus {
+  outline: 2px solid $color-accent-blue;
+  outline-offset: 2px;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background-color: $color-accent-blue;
+  color: $color-text-primary;
+}
