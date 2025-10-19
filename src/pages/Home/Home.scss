@@ -1,72 +1,114 @@
-@import '../../styles/abstracts/variables';
+@use '../../styles/abstracts/variables';
 
 .home {
-  background: $color-primary;
-  color: $color-text-primary;
-  max-width: $mobile;
+  background: var(--color-primary);
+  color: var(--color-text-primary);
   margin: 0 auto;
 
   // ===== NAVBAR =====
   &__navbar {
-    width: 100%;
-    height: $navbar-height;
+    height: var(--navbar-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 16px 20px 16px;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
   }
 
   // ===== HERO SECTION =====
   &__hero {
-    width: 100%;
-    height: $hero-height;
-    padding: 80px 16px 0 16px;
-    border: 1px solid $color-border;
+    min-height: var(--hero-height);
+    padding: 80px 16px;
+    border: 1px solid var(--color-border);
     border-top: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: var(--spacing-md); // ← DODAJ RAZMAK
   }
 
   // ===== CONTAINER SECTION =====
   &__container {
-    width: 358px;
-    height: $container-height;
-    margin: 0 16px;
-    padding-top: 20px;
+    min-height: var(--container-height);
+    margin: 0 16px var(--spacing-md) 16px; // ← DODAJ RAZMAK
+    padding: var(--spacing-lg);
     background: #24242433;
-    border: 1px solid $color-border;
-    border-top: none;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   // ===== SERVICES SECTION =====
   &__services {
-    width: 358px;
-    height: $services-height;
-    margin: 0 16px;
-    border: 1px solid $color-border;
+    min-height: var(--services-height);
+    margin: 0 16px var(--spacing-md) 16px; // ← DODAJ RAZMAK
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
   }
 
   // ===== WHY CHOOSE SECTION =====
   &__why-choose {
-    width: 358px;
-    height: $why-choose-height;
-    margin: 0 16px;
-    border: 1px solid $color-border;
+    min-height: var(--why-choose-height);
+    margin: 0 16px var(--spacing-md) 16px; // ← DODAJ RAZMAK
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
   }
 
   // ===== CONTACT SECTION =====
   &__contact {
-    width: 358px;
-    height: $contact-height;
-    margin: 0 16px;
-    border: 1px solid $color-border;
+    min-height: var(--contact-height);
+    margin: 0 16px var(--spacing-md) 16px; // ← DODAJ RAZMAK
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
   }
 
   // ===== FOOTER =====
   &__footer {
-    width: 100%;
-    height: $footer-height;
+    min-height: var(--footer-height);
     padding: 30px 16px;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: var(--spacing-md); // ← DODAJ RAZMAK
+  }
+
+  // ===== CENTRIRANI NASLOVI =====
+  &__section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  &__section-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 300px;
   }
 }
