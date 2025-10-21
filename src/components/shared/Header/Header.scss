@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__logo {
@@ -21,15 +22,66 @@
     font-weight: bold;
   }
 
-  &__nav {
+  // Hamburger Menu
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    
+    span {
+      width: 20px;
+      height: 2px;
+      background: var(--color-text-primary);
+      margin: 2px 0;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  // Desktop Navigation
+  &__nav--desktop {
     display: flex;
     gap: var(--spacing-md);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Mobile Navigation
+  &__nav--mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-top: none;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+
+    @media (max-width: 768px) {
+      display: none;
+      
+      &.header__nav--open {
+        display: flex;
+      }
+    }
   }
 
   &__nav-link {
     color: var(--color-text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 8px 0;
 
     &:hover {
       color: var(--color-text-primary);
