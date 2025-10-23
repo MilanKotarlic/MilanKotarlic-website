@@ -1,5 +1,4 @@
 import React from 'react'
-import './Hero.scss'
 
 const Hero = ({ title, subtitle }) => {
   return (

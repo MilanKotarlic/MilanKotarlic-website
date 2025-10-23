@@ -1,7 +1,6 @@
 import React from 'react'
-import Header from '../shared/Header/Header'
-import Footer from '../shared/Footer/Footer'
-import './Layout.scss'
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 const Layout = ({ children }) => {
   return (

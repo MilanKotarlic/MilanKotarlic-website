@@ -3,7 +3,6 @@ import Hero from '../../components/shared/Hero/Hero'
 import Services from '../../components/shared/Services/Services'
 import WhyChoose from '../../components/shared/WhyChoose/WhyChoose'
 import Contact from '../../components/shared/Contact/Contact'
-import './Home.scss'
 
 const Home = () => {
   return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import './WhyChoose.scss'
 
 const WhyChoose = ({ title, subtitle }) => {
   return (
