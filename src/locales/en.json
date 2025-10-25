@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Milan Kotarlić",
+    "subtitle": "Digital Product Studio"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Professional solutions for your business"
+  },
+  "whyChoose": {
+    "title": "Why Choose Me", 
+    "subtitle": "Experience and quality you can trust"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's work together"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About", 
+    "gallery": "Gallery",
+    "contact": "Contact"
+  }
+}

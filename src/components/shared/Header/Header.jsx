@@ -1,14 +1,24 @@
 import React, { useState } from 'react'
+import { useStore, setLanguage } from '../../../store'
+import { useLanguage } from '../../../hooks/useLanguage'
 import './Header.scss'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { state, dispatch } = useStore()
+  const { t } = useLanguage()
 
   return (
     <header className="header">
       <div className="header__content">
         <div className="header__logo">Milan Kotarlić</div>
         
+        {/* LANGUAGE SWITCHER */}
+        <div className="header__language">
+          <button onClick={() => dispatch(setLanguage('en'))}>EN</button>
+          <button onClick={() => dispatch(setLanguage('sr'))}>SR</button>
+        </div>
+
         {/* Hamburger Button za Mobile */}
         <button 
           className="header__hamburger"
@@ -19,20 +29,20 @@ const Header = () => {
           <span></span>
         </button>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - PROMENJENO */}
         <nav className="header__nav header__nav--desktop">
-          <a href="/" className="header__nav-link">Home</a>
-          <a href="/about" className="header__nav-link">About</a>
-          <a href="/gallery" className="header__nav-link">Gallery</a>
-          <a href="/contact" className="header__nav-link">Contact</a>
+          <a href="/" className="header__nav-link">{t('navigation.home')}</a>
+          <a href="/about" className="header__nav-link">{t('navigation.about')}</a>
+          <a href="/gallery" className="header__nav-link">{t('navigation.gallery')}</a>
+          <a href="/contact" className="header__nav-link">{t('navigation.contact')}</a>
         </nav>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - PROMENJENO */}
         <nav className={`header__nav header__nav--mobile ${isMenuOpen ? 'header__nav--open' : ''}`}>
-          <a href="/" className="header__nav-link">Home</a>
-          <a href="/about" className="header__nav-link">About</a>
-          <a href="/gallery" className="header__nav-link">Gallery</a>
-          <a href="/contact" className="header__nav-link">Contact</a>
+          <a href="/" className="header__nav-link">{t('navigation.home')}</a>
+          <a href="/about" className="header__nav-link">{t('navigation.about')}</a>
+          <a href="/gallery" className="header__nav-link">{t('navigation.gallery')}</a>
+          <a href="/contact" className="header__nav-link">{t('navigation.contact')}</a>
         </nav>
       </div>
     </header>

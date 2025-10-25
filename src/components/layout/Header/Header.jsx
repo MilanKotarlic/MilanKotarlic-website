@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
+import { useStore, setLanguage } from '../../../store'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { state, dispatch } = useStore()
 
   return (
     <header className="header">
       <div className="header__content">
         <div className="header__logo">Milan Kotarlić</div>
+
+         <div className="header__language">
+          <button onClick={() => dispatch(setLanguage('en'))}>EN</button>
+          <button onClick={() => dispatch(setLanguage('sr'))}>SR</button>
+        </div>
         
         {/* HAMBURGER BUTTON */}
         <button 
