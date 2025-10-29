@@ -1,0 +1,17 @@
+@use './abstracts/variables.scss';
+@use './base/reset.scss';
+@use './base/typography.scss';
+
+@use './components/header.scss';
+@use './components/footer.scss';
+@use './components/layout.scss';
+@use './components/hero.scss';
+@use './components/services.scss';
+@use './components/whychoose.scss';
+@use './components/contact.scss';
+
+@use './pages/home.scss';
+
+.app {
+  min-height: 100vh;
+}

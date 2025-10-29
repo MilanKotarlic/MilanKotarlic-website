@@ -1,0 +1,32 @@
+{
+  "name": "milankotarlic-website",
+  "version": "1.0.0",
+  "description": "This is a Milan Kotarlic bio and work website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilanKotarlic/MilanKotarlic-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MilanKotarlic/MilanKotarlic-website/issues"
+  },
+  "homepage": "https://github.com/MilanKotarlic/MilanKotarlic-website#readme",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^6.30.1",
+    "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.10"
+  }
+}

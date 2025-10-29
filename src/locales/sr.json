@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Milan Kotarlić",
+    "subtitle": "Digitalni Studio"
+  },
+  "services": {
+    "title": "Moje Usluge",
+    "subtitle": "Profesionalna rešenja za vaš biznis"
+  },
+  "whyChoose": {
+    "title": "Zašto Izabrati Mene",
+    "subtitle": "Iskustvo i kvalitet kojima možete verovati"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Započnimo saradnju"
+  },
+  "navigation": {
+    "home": "Početna",
+    "about": "O Meni", 
+    "gallery": "Galerija",
+    "contact": "Kontakt"
+  }
+}
