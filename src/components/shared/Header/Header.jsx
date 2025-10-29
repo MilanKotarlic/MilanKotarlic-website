@@ -13,13 +13,12 @@ const Header = () => {
       <div className="header__content">
         <div className="header__logo">Milan Kotarlić</div>
         
-        {/* LANGUAGE SWITCHER */}
+        
         <div className="header__language">
           <button onClick={() => dispatch(setLanguage('en'))}>EN</button>
           <button onClick={() => dispatch(setLanguage('sr'))}>SR</button>
         </div>
 
-        {/* Hamburger Button za Mobile */}
         <button 
           className="header__hamburger"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -29,7 +28,6 @@ const Header = () => {
           <span></span>
         </button>
 
-        {/* Desktop Navigation - PROMENJENO */}
         <nav className="header__nav header__nav--desktop">
           <a href="/" className="header__nav-link">{t('navigation.home')}</a>
           <a href="/about" className="header__nav-link">{t('navigation.about')}</a>
@@ -37,7 +35,6 @@ const Header = () => {
           <a href="/contact" className="header__nav-link">{t('navigation.contact')}</a>
         </nav>
 
-        {/* Mobile Navigation - PROMENJENO */}
         <nav className={`header__nav header__nav--mobile ${isMenuOpen ? 'header__nav--open' : ''}`}>
           <a href="/" className="header__nav-link">{t('navigation.home')}</a>
           <a href="/about" className="header__nav-link">{t('navigation.about')}</a>

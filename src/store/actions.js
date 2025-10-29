@@ -1,9 +1,4 @@
-export const actionTypes = {
-  SET_LANGUAGE: 'SET_LANGUAGE',
-  SET_SITE_DATA: 'SET_SITE_DATA', 
-  SET_LOADING: 'SET_LOADING',
-  SET_ERROR: 'SET_ERROR'
-}
+import { actionTypes } from './actionTypes'
 
 export const setLanguage = (language) => ({
   type: actionTypes.SET_LANGUAGE,

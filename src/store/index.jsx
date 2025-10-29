@@ -1,7 +1,8 @@
 import React, { createContext, useReducer, useContext } from 'react'
 import { reducer } from './reducer'
 import { defaultState } from './defaultState'
-import { actionTypes, setLanguage, setSiteData, setLoading, setError } from './actions'
+import { setLanguage, setSiteData, setLoading, setError } from './actions'
+import { actionTypes } from './actionTypes'
 
 const StoreContext = createContext()
 

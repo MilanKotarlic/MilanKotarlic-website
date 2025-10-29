@@ -1,4 +1,4 @@
-import { actionTypes } from './actions'
+import { actionTypes } from './actionTypes'
 import { defaultState } from './defaultState'
 
 export const reducer = (state = defaultState, action) => {

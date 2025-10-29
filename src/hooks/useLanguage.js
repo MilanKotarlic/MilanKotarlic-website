@@ -12,7 +12,7 @@ const translations = {
 export const useLanguage = () => {
   const { state } = useStore()
   
-  // Funkcija za prevod
+
   const t = (key) => {
     const keys = key.split('.')
     let value = translations[state.language]
