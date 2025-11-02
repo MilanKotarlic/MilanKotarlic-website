@@ -1,27 +1,139 @@
 @use '../abstracts/variables';
 
+
 .hero {
-  min-height: var(--hero-height);
-  padding: 80px var(--spacing-md);
-  border: 1px solid var(--color-border);
-  border-top: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: var(--spacing-md);
+  width: 100%;
+  max-width: 390px;
+  min-height: 566px;
+  margin: 106px auto 0;
+  border: 0px solid #262626;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  padding: 80px 16px 0px 16px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: transparent;
+
+  &__background-pattern {
+    position: absolute;
+    width: 859px;
+    height: 248px;
+    top: 131px;
+    left: -251px;
+    opacity: 0.3;
+    transform: rotate(180deg);
+    background-image: url('images/AbstractDesign.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
   &__title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
-    margin-bottom: var(--spacing-md);
+    width: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  &__blur-box {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(36, 36, 36, 0.2);
+    border: 1px solid #262626;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   &__subtitle {
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    padding: 0 var(--spacing-md);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  &__buttons {
+    width: 100%;
+    max-width: 224px;
+    display: flex;
+    gap: 13px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  &__btn {
+    height: 45px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+
+    &--secondary {
+      background: rgba(36, 36, 36, 0.2);
+      border: 1px solid #333333;
+      backdrop-filter: blur(12px);
+      color: #FFFFFF;
+    }
+
+    &--primary {
+      background: #9EFF00;
+      color: #262626;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 390px) {
+  .hero {
+    margin-top: 60px;
+    padding: 60px 12px 0px 12px;
+    
+    &__title {
+      font-size: 28px;
+    }
+    
+    &__buttons {
+      flex-direction: column;
+      max-width: 200px;
+    }
   }
 }
