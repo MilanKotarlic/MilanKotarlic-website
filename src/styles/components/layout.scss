@@ -4,7 +4,7 @@
   min-height: 100vh;
   background: var(--color-primary);
   color: var(--color-text-primary);
-  
+
   &__content {
     min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
   }

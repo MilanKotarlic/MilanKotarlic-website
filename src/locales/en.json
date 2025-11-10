@@ -17,52 +17,39 @@
       "description": "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
     },
     "projectManagement": {
-      "title": "Project Management", 
+      "title": "Project Management",
       "description": "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
     },
     "learnMore": "Learn More"
   },
   "whyChoose": {
-  "title": "Why Choose Me",
-  "subtitle": "Experience and quality you can trust",
-  "expertise": {
-    "title": "Expertise",
-    "description": "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions."
+    "title": "Why Choose Me",
+    "subtitle": "Experience and quality you can trust",
+    "expertise": {
+      "title": "Expertise",
+      "description": "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions."
+    },
+    "clientCentric": {
+      "title": "Client-Centric Approach",
+      "description": "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success."
+    },
+    "resultsDriven": {
+      "title": "Results-Driven Solutions",
+      "description": "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage."
+    },
+    "collaborative": {
+      "title": "Collaborative Partnership",
+      "description": "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive."
+    }
   },
-  "clientCentric": {
-    "title": "Client-Centric Approach", 
-    "description": "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success."
-  },
-  "resultsDriven": {
-    "title": "Results-Driven Solutions",
-    "description": "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage."
-  },
-  "collaborative": {
-    "title": "Collaborative Partnership",
-    "description": "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive."
-  }
-},
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Thank you for your Interest in SquareUp. We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.",
-    "startProject": "Start Project",
-    "fullName": "Full Name",
-    "email": "Email",
-    "contactReason": "Why are you contacting us?",
-    "webDesign": "Web Design",
-    "collaboration": "Collaboration", 
-    "mobileApp": "Mobile app design",
-    "others": "Others",
-    "budget": "Your Budget",
-    "budgetHint": "Slide to indicate your budget range",
-    "minBudget": "$1000",
-    "maxBudget": "$5000",
-    "message": "Your Message",
-    "submit": "Submit"
-},
+    "subtitle": "Thank you for your Interest in SquareUp. We would love to hear from you and discuss how we can help bring your digital ideas to life.",
+    "startProject": "Start Project"
+  },
   "navigation": {
     "home": "Home",
-    "about": "About", 
+    "about": "About",
     "gallery": "Gallery",
     "contact": "Contact"
   }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Gallery = () => {
   return (
@@ -8,7 +8,7 @@ const Gallery = () => {
         <p>Moja muzika</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

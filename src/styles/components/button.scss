@@ -1,0 +1,58 @@
+@use '../abstracts/variables';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-family-barlow);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  // Sizes
+  &--small {
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-sm);
+  }
+
+  &--medium {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-md);
+  }
+
+  &--large {
+    padding: 1rem 2rem;
+    font-size: var(--font-size-lg);
+  }
+
+  // Variants
+  &--primary {
+    background: var(--color-accent);
+    color: var(--color-secondary);
+
+    &:hover:not(:disabled) {
+      background: #8ae600;
+    }
+  }
+
+  &--secondary {
+    background: var(--color-bg-blur);
+    border: 1px solid var(--color-gray-dark);
+    color: var(--color-text-primary);
+    backdrop-filter: blur(12px);
+
+    &:hover:not(:disabled) {
+      background: rgba(36, 36, 36, 0.4);
+    }
+  }
+
+  // States
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

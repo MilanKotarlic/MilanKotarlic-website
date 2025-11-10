@@ -1,16 +1,12 @@
 @use '../abstracts/variables';
 
-
 .hero {
   width: 100%;
-  max-width: 390px;
-  min-height: 566px;
-  margin: 106px auto 0;
-  border: 0px solid #262626;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  padding: 80px 16px 0px 16px;
+  min-height: 35.4rem;
+  margin: 6.6rem auto 0;
+  border: 0 solid var(--color-border);
+  border-width: 0 1px 1px;
+  padding: 5rem 1rem 0;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -18,25 +14,23 @@
 
   &__background-pattern {
     position: absolute;
-    width: 859px;
-    height: 248px;
-    top: 131px;
-    left: -251px;
+    width: 53.7rem;
+    height: 15.5rem;
+    top: 8.2rem;
+    left: -15.7rem;
     opacity: 0.3;
     transform: rotate(180deg);
-    background-image: url('images/AbstractDesign.png');
+    background-image: url('/images/AbstractDesign.png');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-
   }
 
   &__container {
     width: 100%;
-    max-width: 358px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
     margin: 0 auto;
   }
 
@@ -44,26 +38,26 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.9rem;
   }
 
   &__title {
     width: 100%;
-    font-family: 'Barlow', sans-serif;
+    font-family: var(--font-family-barlow);
     font-weight: 600;
-    font-size: 34px;
-    line-height: 100%;
+    font-size: 2.1rem;
+    line-height: var(--line-height-tight);
     text-align: center;
-    color: #FFFFFF;
+    color: var(--color-text-primary);
     margin: 0;
   }
 
   &__blur-box {
     width: 100%;
-    padding: 18px 20px;
-    background: rgba(36, 36, 36, 0.2);
-    border: 1px solid #262626;
-    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    background: var(--color-bg-blur);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
@@ -72,35 +66,34 @@
   }
 
   &__subtitle {
-    font-family: 'Barlow', sans-serif;
+    font-family: var(--font-family-barlow);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
     text-align: center;
-    color: #FFFFFF;
+    color: var(--color-text-primary);
     margin: 0;
   }
 
   &__buttons {
     width: 100%;
-    max-width: 224px;
     display: flex;
-    gap: 13px;
+    gap: 0.8rem;
     margin: 0 auto;
     justify-content: center;
   }
 
   &__btn {
-    height: 45px;
-    padding: 14px 20px;
-    border-radius: 8px;
-    font-family: 'Barlow', sans-serif;
+    height: 2.8rem;
+    padding: 0.875rem 1.25rem;
+    border-radius: var(--border-radius-md);
+    font-family: var(--font-family-barlow);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-tight);
     border: none;
     cursor: pointer;
-    gap: 10px;
+    gap: 0.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,32 +101,51 @@
     min-width: 0;
 
     &--secondary {
-      background: rgba(36, 36, 36, 0.2);
-      border: 1px solid #333333;
+      background: var(--color-bg-blur);
+      border: 1px solid var(--color-gray-dark);
       backdrop-filter: blur(12px);
-      color: #FFFFFF;
+      color: var(--color-text-primary);
     }
 
     &--primary {
-      background: #9EFF00;
-      color: #262626;
+      background: var(--color-accent);
+      color: var(--color-border);
     }
   }
 }
 
-// Responsive
+@media (min-width: 768px) {
+  .hero {
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__buttons {
+      max-width: 25rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    &__title {
+      font-size: 3.5rem;
+    }
+  }
+}
+
 @media (max-width: 390px) {
   .hero {
-    margin-top: 60px;
-    padding: 60px 12px 0px 12px;
-    
+    margin-top: 3.75rem;
+    padding: 3.75rem 0.75rem 0;
+
     &__title {
-      font-size: 28px;
+      font-size: 1.75rem;
     }
-    
+
     &__buttons {
       flex-direction: column;
-      max-width: 200px;
+      max-width: 12.5rem;
     }
   }
 }

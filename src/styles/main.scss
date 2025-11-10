@@ -1,16 +1,23 @@
-@use './abstracts/variables.scss';
-@use './base/reset.scss';
-@use './base/typography.scss';
+// Abstracts
+@use './abstracts/variables';
+@use './abstracts/mixins';
 
-@use './components/header.scss';
-@use './components/footer.scss';
-@use './components/layout.scss';
-@use './components/hero.scss';
-@use './components/services.scss';
-@use './components/whychoose.scss';
-@use './components/contact.scss';
+// Base
+@use './base/reset';
+@use './base/typography';
 
-@use './pages/home.scss';
+// Components
+@use './components/header';
+@use './components/footer';
+@use './components/layout';
+@use './components/hero';
+@use './components/services';
+@use './components/whychoose';
+@use './components/contact';
+@use './components/button';
+
+// Pages
+@use './pages/home';
 
 .app {
   min-height: 100vh;
