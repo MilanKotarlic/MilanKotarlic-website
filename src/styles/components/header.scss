@@ -16,27 +16,56 @@
   }
 
   &__logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
-    font-weight: bold;
+    &-outer {
+      width: 118.48px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-container {
+      width: 40.19px;
+      height: 40px;
+      background: #9eff00;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    &-image {
+      width: 25.54px;
+      height: 28.73px;
+      position: absolute;
+      top: 5.63px;
+      left: 7.32px;
+    }
+
+    &-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: var(--color-text-primary);
+      font-weight: bold;
+    }
   }
 
   // Hamburger Menu
   &__hamburger {
     display: none;
-    flex-direction: column;
-    background: none;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
-    padding: 4px;
-    
-    span {
-      width: 20px;
-      height: 2px;
-      background: var(--color-text-primary);
-      margin: 2px 0;
-      transition: 0.3s;
+    width: 46px;
+    height: 46px;
+    padding: 6px;
+
+    &-icon {
+      width: 34px;
+      height: 34px;
     }
 
     @media (max-width: 768px) {
@@ -70,7 +99,7 @@
 
     @media (max-width: 768px) {
       display: none;
-      
+
       &.header__nav--open {
         display: flex;
       }
@@ -92,7 +121,7 @@
 .header__language {
   display: flex;
   gap: 8px;
-  
+
   button {
     padding: 6px 12px;
     border: 1px solid var(--color-border);
@@ -101,7 +130,7 @@
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
-    
+
     &:hover {
       background: var(--color-border);
       color: var(--color-text-primary);

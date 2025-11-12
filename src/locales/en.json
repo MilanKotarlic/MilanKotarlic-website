@@ -1,23 +1,55 @@
 {
   "hero": {
-    "title": "Milan Kotarlić",
-    "subtitle": "Digital Product Studio"
+    "title": "A Digital Product Studio that will Work",
+    "subtitle": "For startups, enterprise leaders, media & publishers, and social good.",
+    "primaryButton": "Contact Us",
+    "secondaryButton": "Our Works"
   },
   "services": {
     "title": "My Services",
-    "subtitle": "Professional solutions for your business"
+    "subtitle": "Professional solutions for your business",
+    "design": {
+      "title": "Design",
+      "description": "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences."
+    },
+    "engineering": {
+      "title": "Engineering",
+      "description": "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
+    },
+    "learnMore": "Learn More"
   },
   "whyChoose": {
-    "title": "Why Choose Me", 
-    "subtitle": "Experience and quality you can trust"
+    "title": "Why Choose Me",
+    "subtitle": "Experience and quality you can trust",
+    "expertise": {
+      "title": "Expertise",
+      "description": "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions."
+    },
+    "clientCentric": {
+      "title": "Client-Centric Approach",
+      "description": "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success."
+    },
+    "resultsDriven": {
+      "title": "Results-Driven Solutions",
+      "description": "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage."
+    },
+    "collaborative": {
+      "title": "Collaborative Partnership",
+      "description": "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive."
+    }
   },
   "contact": {
-    "title": "Contact Me",
-    "subtitle": "Let's work together"
+    "title": "Contact Us",
+    "subtitle": "Thank you for your Interest in SquareUp. We would love to hear from you and discuss how we can help bring your digital ideas to life.",
+    "startProject": "Start Project"
   },
   "navigation": {
     "home": "Home",
-    "about": "About", 
+    "about": "About",
     "gallery": "Gallery",
     "contact": "Contact"
   }

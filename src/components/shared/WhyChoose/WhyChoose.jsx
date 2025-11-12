@@ -1,12 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-const WhyChoose = ({ title, subtitle }) => {
+const WhyChoose = ({ title, subtitle, children }) => {
   return (
     <section className="why-choose">
-      <h2 className="why-choose__title">{title}</h2>
-      <p className="why-choose__subtitle">{subtitle}</p>
-    </section>
-  )
-}
+      <div className="why-choose__container">
+        <div className="why-choose__header">
+          <h2 className="why-choose__title">{title}</h2>
+          <p className="why-choose__subtitle">{subtitle}</p>
+        </div>
 
-export default WhyChoose
+        <div className="why-choose__cards">
+          {children}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChoose;

@@ -1,23 +1,55 @@
 {
   "hero": {
-    "title": "Milan Kotarlić",
-    "subtitle": "Digitalni Studio"
+    "title": "Digitalni Produkt Studio koji će Raditi",
+    "subtitle": "Za startupove, leaders enterprise, medije & izdavače, i društveno dobro.",
+    "primaryButton": "Kontaktirajte Nas",
+    "secondaryButton": "Naši Radovi"
   },
   "services": {
     "title": "Moje Usluge",
-    "subtitle": "Profesionalna rešenja za vaš biznis"
+    "subtitle": "Profesionalna rešenja za vaš biznis",
+    "design": {
+      "title": "Dizajn",
+      "description": "U Squareup-u, naš dizajn tim je strastven u stvaranju zadivljujućih, korisničkih orijentisanih dizajna koji osvajaju vašu publiku i podižu vaš brend. Verujemo da odličan dizajn nije samo pitanje estetike; radi se o stvaranju neprimetnih i intuitivnih korisničkih iskustava."
+    },
+    "engineering": {
+      "title": "Inženjerstvo",
+      "description": "Naš inženjerski tim kombinuje tehničku ekspertizu sa strašću za inovacijama kako bi izgradio stabilna i prilagodljiva digitalna rešenja. Koristimo najnovije tehnologije i najbolje prakse za isporuku aplikacija visokih performansi prilagođenih vašim specifičnim potrebama."
+    },
+    "projectManagement": {
+      "title": "Upravljanje Projektima",
+      "description": "Naš iskusan tim za upravljanje projektima osigurava da se vaši projekti isporuče na vreme, u okviru budžeta i u skladu sa vašim specifikacijama. Pratimo industrijske standardne metodologije i koristimo efikasne alate za komunikaciju i saradnju kako bismo vas održavali informisanim tokom celog procesa razvoja."
+    },
+    "learnMore": "Saznaj Više"
   },
   "whyChoose": {
     "title": "Zašto Izabrati Mene",
-    "subtitle": "Iskustvo i kvalitet kojima možete verovati"
+    "subtitle": "Iskustvo i kvalitet kojima možete verovati",
+    "expertise": {
+      "title": "Stručnost",
+      "description": "Naš tim čine visokokvalifikovani profesionalci koji duboko razumeju digitalni krajolik. Pratimo najnovije trendove u industriji i najbolje prakse kako bismo isporučili vrhunska rešenja."
+    },
+    "clientCentric": {
+      "title": "Klijentima Usmeren Pristup",
+      "description": "Dajemo prioritet našim klijentima i njihovim jedinstvenim potrebama. Slušamo vaše ideje, izazove i ciljeve, i prilagođavamo naše usluge da ispunimo vaše specifične zahteve. Vaš uspeh je naš uspeh."
+    },
+    "resultsDriven": {
+      "title": "Rezultatima Usmerena Rešenja",
+      "description": "Naš primarni fokus je na isporuci rezultata. Kombinujemo kreativnost i tehničku stručnost kako bismo kreirali digitalne proizvode koji pokreću poslovni rast, poboljšavaju korisnička iskustava i pružaju konkurentsku prednost."
+    },
+    "collaborative": {
+      "title": "Partnerska Saradnja",
+      "description": "Cenimo dugoročne odnose sa našim klijentima. Vidimo se kao vaš digitalni partner, pružajući kontinuiranu podršku, održavanje i ažuriranja kako bismo osigurali da vaši digitalni proizvodi nastave da napreduju."
+    }
   },
   "contact": {
-    "title": "Kontakt",
-    "subtitle": "Započnimo saradnju"
+    "title": "Kontaktirajte Nas",
+    "subtitle": "Hvala vam što ste zainteresovani za SquareUp. Rado bismo čuli od vas i razgovarali o tome kako možemo pomoći da oživite vaše digitalne ideje.",
+    "startProject": "Započni Projekt"
   },
   "navigation": {
     "home": "Početna",
-    "about": "O Meni", 
+    "about": "O Meni",
     "gallery": "Galerija",
     "contact": "Kontakt"
   }
