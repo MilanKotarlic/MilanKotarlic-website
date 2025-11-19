@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useStore, setLanguage } from '../../../store';
 import { useLanguage } from '../../../hooks/useLanguage';
 
@@ -6,6 +7,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { state, dispatch } = useStore();
   const { t } = useLanguage();
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="header">
@@ -24,41 +27,38 @@ const Header = () => {
           <button onClick={() => dispatch(setLanguage('sr'))}>SR</button>
         </div>
 
-        {/* HAMBURGER BUTTON */}
         <button className="header__hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <img src="/images/Icon.png" alt="Menu" className="header__hamburger-icon" />
         </button>
 
-        {/* Desktop Navigation */}
         <nav className="header__nav header__nav--desktop">
-          <a href="/" className="header__nav-link">
+          <Link to="/" className="header__nav-link">
             {t('navigation.home')}
-          </a>
-          <a href="/about" className="header__nav-link">
+          </Link>
+          <Link to="/about" className="header__nav-link">
             {t('navigation.about')}
-          </a>
-          <a href="/gallery" className="header__nav-link">
+          </Link>
+          <Link to="/gallery" className="header__nav-link">
             {t('navigation.gallery')}
-          </a>
-          <a href="/contact" className="header__nav-link">
+          </Link>
+          <Link to="/contact" className="header__nav-link">
             {t('navigation.contact')}
-          </a>
+          </Link>
         </nav>
 
-        {/* Mobile Navigation */}
         <nav className={`header__nav header__nav--mobile ${isMenuOpen ? 'header__nav--open' : ''}`}>
-          <a href="/" className="header__nav-link">
+          <Link to="/" className="header__nav-link" onClick={closeMenu}>
             {t('navigation.home')}
-          </a>
-          <a href="/about" className="header__nav-link">
+          </Link>
+          <Link to="/about" className="header__nav-link" onClick={closeMenu}>
             {t('navigation.about')}
-          </a>
-          <a href="/gallery" className="header__nav-link">
+          </Link>
+          <Link to="/gallery" className="header__nav-link" onClick={closeMenu}>
             {t('navigation.gallery')}
-          </a>
-          <a href="/contact" className="header__nav-link">
+          </Link>
+          <Link to="/contact" className="header__nav-link" onClick={closeMenu}>
             {t('navigation.contact')}
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

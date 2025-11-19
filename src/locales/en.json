@@ -52,5 +52,21 @@
     "about": "About",
     "gallery": "Gallery",
     "contact": "Contact"
+  },
+  "gallery": {
+  "title": "My Music",
+  "subtitle": "Here you can find all my latest music videos and performances",
+  "videos": {
+    "video1": {
+      "title": "Milan Kotarlić - Song 1"
+    },
+    "video2": {
+      "title": "Milan Kotarlić - Song 2"
+    },
+    "video3": {
+      "title": "Milan Kotarlić - Song 3"
+    }
   }
+}
+  
 }
