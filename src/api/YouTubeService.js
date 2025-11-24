@@ -1,4 +1,4 @@
-// src/api/YouTubeService.js
+
 
 const API_KEY = 'AIzaSyDpQCn_5RKkEPGobHJ7d-ar5YlSxj4UsWE';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';

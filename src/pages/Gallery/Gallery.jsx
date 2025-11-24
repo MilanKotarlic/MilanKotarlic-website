@@ -1,34 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
-import YouTubeService from '../../api/YouTubeService';
+import { useVideo } from '../../context/VideoContext';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import '../../styles/components/gallery.scss';
 
 const Gallery = () => {
   const { t } = useLanguage();
-  const [videos, setVideos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { videos, loading, error, currentVideo, setCurrentVideo, clearCurrentVideo } = useVideo();
 
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        setLoading(true);
-
-        const channelVideos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
-        setVideos(channelVideos);
-      } catch (err) {
-        setError('Failed to load videos. Please try again later.');
-        console.error('Error fetching videos:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchVideos();
-  }, []);
-
-  const openVideo = (videoId) => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+  const handleVideoClick = (video) => {
+    setCurrentVideo(video);
   };
 
   if (loading) {
@@ -79,15 +60,13 @@ const Gallery = () => {
               <div 
                 key={video.id} 
                 className="video-card"
-                onClick={() => openVideo(video.videoId)}
-                style={{ cursor: 'pointer' }}
+                onClick={() => handleVideoClick(video)}
               >
                 <div className="video-card__thumbnail">
                   <img 
                     src={video.thumbnail} 
                     alt={video.title}
                     onError={(e) => {
-                    
                       e.target.src = '/images/design.png';
                     }}
                   />
@@ -107,6 +86,15 @@ const Gallery = () => {
           )}
         </div>
       </div>
+
+      {/* Video Player Modal */}
+      {currentVideo && (
+        <VideoPlayer
+          videoId={currentVideo.videoId}
+          title={currentVideo.title}
+          onClose={clearCurrentVideo}
+        />
+      )}
     </section>
   );
 };
