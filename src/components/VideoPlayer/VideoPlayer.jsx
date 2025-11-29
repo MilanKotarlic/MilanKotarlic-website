@@ -23,9 +23,7 @@ const VideoPlayer = ({ videoId, title, onClose }) => {
             allowFullScreen
           />
         </div>
-        <div className="video-player__notice">
-          <p>Note: If videos don't play, try disabling Grammarly extension</p>
-        </div>
+        
       </div>
     </div>
   );

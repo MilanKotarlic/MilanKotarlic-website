@@ -1,6 +1,4 @@
-
-
-const API_KEY = 'AIzaSyDpQCn_5RKkEPGobHJ7d-ar5YlSxj4UsWE';
+const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 
 class YouTubeService {
@@ -22,7 +20,6 @@ class YouTubeService {
     }
   }
 
-
   static async getUploadsPlaylistId(channelId) {
     try {
       const response = await fetch(
@@ -41,7 +38,6 @@ class YouTubeService {
     }
   }
 
-
   static async getPlaylistVideos(playlistId, maxResults = 12) {
     try {
       const response = await fetch(
@@ -54,7 +50,6 @@ class YouTubeService {
       
       const data = await response.json();
       
-
       return data.items.map(item => ({
         id: item.id,
         videoId: item.snippet.resourceId.videoId,
@@ -69,10 +64,8 @@ class YouTubeService {
     }
   }
 
-
   static async getChannelUploads(channelHandle = 'TheMilanKotarlic') {
     try {
-
       const channelData = await this.getChannelByHandle(channelHandle);
       
       if (!channelData.items || channelData.items.length === 0) {
@@ -81,10 +74,8 @@ class YouTubeService {
 
       const channelId = channelData.items[0].id;
       
-
       const uploadsPlaylistId = await this.getUploadsPlaylistId(channelId);
       
-
       const videos = await this.getPlaylistVideos(uploadsPlaylistId);
       
       return videos;
@@ -93,7 +84,6 @@ class YouTubeService {
       throw error;
     }
   }
-
 
   static async getVideoDetails(videoId) {
     try {

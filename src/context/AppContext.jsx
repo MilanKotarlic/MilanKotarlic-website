@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import YouTubeService from '../api/YouTubeService';
 
-const VIDEO_ACTIONS = {
+const APP_ACTIONS = {
   FETCH_START: 'FETCH_START',
   FETCH_SUCCESS: 'FETCH_SUCCESS',
   FETCH_ERROR: 'FETCH_ERROR',
@@ -9,33 +9,33 @@ const VIDEO_ACTIONS = {
   CLEAR_CURRENT_VIDEO: 'CLEAR_CURRENT_VIDEO'
 };
 
-const videoReducer = (state, action) => {
+const appReducer = (state, action) => {
   switch (action.type) {
-    case VIDEO_ACTIONS.FETCH_START:
+    case APP_ACTIONS.FETCH_START:
       return {
         ...state,
         loading: true,
         error: null
       };
-    case VIDEO_ACTIONS.FETCH_SUCCESS:
+    case APP_ACTIONS.FETCH_SUCCESS:
       return {
         ...state,
         loading: false,
         videos: action.payload,
         error: null
       };
-    case VIDEO_ACTIONS.FETCH_ERROR:
+    case APP_ACTIONS.FETCH_ERROR:
       return {
         ...state,
         loading: false,
         error: action.payload
       };
-    case VIDEO_ACTIONS.SET_CURRENT_VIDEO:
+    case APP_ACTIONS.SET_CURRENT_VIDEO:
       return {
         ...state,
         currentVideo: action.payload
       };
-    case VIDEO_ACTIONS.CLEAR_CURRENT_VIDEO:
+    case APP_ACTIONS.CLEAR_CURRENT_VIDEO:
       return {
         ...state,
         currentVideo: null
@@ -52,23 +52,21 @@ const initialState = {
   currentVideo: null
 };
 
+const AppContext = createContext();
 
-const VideoContext = createContext();
-
-
-export const VideoProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(videoReducer, initialState);
+export const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
   useEffect(() => {
     const fetchVideos = async () => {
-      dispatch({ type: VIDEO_ACTIONS.FETCH_START });
+      dispatch({ type: APP_ACTIONS.FETCH_START });
       
       try {
         const videos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
-        dispatch({ type: VIDEO_ACTIONS.FETCH_SUCCESS, payload: videos });
+        dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: videos });
       } catch (error) {
         dispatch({ 
-          type: VIDEO_ACTIONS.FETCH_ERROR, 
+          type: APP_ACTIONS.FETCH_ERROR, 
           payload: 'Failed to load videos from YouTube' 
         });
       }
@@ -78,11 +76,11 @@ export const VideoProvider = ({ children }) => {
   }, []);
 
   const setCurrentVideo = (video) => {
-    dispatch({ type: VIDEO_ACTIONS.SET_CURRENT_VIDEO, payload: video });
+    dispatch({ type: APP_ACTIONS.SET_CURRENT_VIDEO, payload: video });
   };
 
   const clearCurrentVideo = () => {
-    dispatch({ type: VIDEO_ACTIONS.CLEAR_CURRENT_VIDEO });
+    dispatch({ type: APP_ACTIONS.CLEAR_CURRENT_VIDEO });
   };
 
   const value = {
@@ -95,16 +93,16 @@ export const VideoProvider = ({ children }) => {
   };
 
   return (
-    <VideoContext.Provider value={value}>
+    <AppContext.Provider value={value}>
       {children}
-    </VideoContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useVideo = () => {
-  const context = useContext(VideoContext);
+export const useApp = () => {
+  const context = useContext(AppContext);
   if (!context) {
-    throw new Error('useVideo must be used within a VideoProvider');
+    throw new Error('useApp must be used within a AppProvider');
   }
   return context;
 };

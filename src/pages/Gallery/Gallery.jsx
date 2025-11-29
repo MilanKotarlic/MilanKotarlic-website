@@ -1,12 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
-import { useVideo } from '../../context/VideoContext';
+import { useApp } from '../../context/AppContext';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import '../../styles/components/gallery.scss';
 
 const Gallery = () => {
   const { t } = useLanguage();
-  const { videos, loading, error, currentVideo, setCurrentVideo, clearCurrentVideo } = useVideo();
+  const { videos, loading, error, currentVideo, setCurrentVideo, clearCurrentVideo } = useApp();
 
   const handleVideoClick = (video) => {
     setCurrentVideo(video);
