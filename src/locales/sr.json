@@ -52,5 +52,20 @@
     "about": "O Meni",
     "gallery": "Galerija",
     "contact": "Kontakt"
+  },
+  "gallery": {
+  "title": "Moja Muzika", 
+  "subtitle": "Ovde možete pronaći sve moje najnovije muzičke spotove i izvođenja",
+  "videos": {
+    "video1": {
+      "title": "Milan Kotarlić - Pesma 1"
+    },
+    "video2": {
+      "title": "Milan Kotarlić - Pesma 2"
+    },
+    "video3": {
+      "title": "Milan Kotarlić - Pesma 3"
+    }
   }
+}
 }
