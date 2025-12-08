@@ -67,6 +67,36 @@
       "title": "Milan Kotarlić - Song 3"
     }
   }
-}
+},
+
+  "about": {
+    "title": "About Me",
+    "greeting": "Hello I am Milan",
+    "description": "A passionate digital creator with expertise in web development, design, and content creation. I love turning ideas into reality through code and creativity.",
+    "links": "My Links",
+    "products": "My Products",
+    "youtubeChannel": "YouTube Channel",
+    "youtubeDescription": "Check out my latest videos and tutorials on web development, design, and technology.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "subtitle": "Get in touch with me for collaborations, projects, or just to say hello!",
+    "letsWork": "Let's Work Together",
+    "projectDescription": "Have a project in mind? Let's discuss how we can bring your ideas to life.",
+    "startProject": "Start a Project",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "connect": "Connect With Me",
+    "sendMessage": "Send me a message",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Your Message",
+    "sendButton": "Send Message"
+  }
   
 }
