@@ -67,5 +67,34 @@
       "title": "Milan Kotarlić - Pesma 3"
     }
   }
-}
+},
+  "about": {
+    "title": "O meni",
+    "greeting": "Zdravo, ja sam Milan",
+    "description": "Strastveni digitalni kreator sa ekspertizom u web developmentu, dizajnu i kreiranju sadržaja. Volim da pretvaram ideje u stvarnost kroz kod i kreativnost.",
+    "links": "Moji linkovi",
+    "products": "Moji proizvodi",
+    "youtubeChannel": "YouTube kanal",
+    "youtubeDescription": "Pogledajte moje najnovije video tutorijale o web developmentu, dizajnu i tehnologiji.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "facebook": "Facebook",
+    "instagram": "Instagram"
+  },
+  "contactPage": {
+    "title": "Kontakt",
+    "subtitle": "Javite mi se za saradnju, projekte ili samo da pozdravite!",
+    "letsWork": "Zajedno da radimo",
+    "projectDescription": "Imate ideju za projekat? Hajde da razgovaramo kako možemo da je ostvarimo.",
+    "startProject": "Započni projektat",
+    "email": "Email",
+    "phone": "Telefon",
+    "location": "Lokacija",
+    "connect": "Povežimo se",
+    "sendMessage": "Pošaljite mi poruku",
+    "namePlaceholder": "Vaše ime",
+    "emailPlaceholder": "Vaš email",
+    "messagePlaceholder": "Vaša poruka",
+    "sendButton": "Pošalji poruku"
+  }
 }
