@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": { "videoId": "dQw4w9WgXcQ" },
+      "snippet": {
+        "title": "Test Video 1 - Iron Maiden",
+        "description": "Mock description for testing",
+        "thumbnails": {
+          "medium": { "url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg" }
+        },
+        "channelTitle": "Mock Channel"
+      }
+    },
+    {
+      "id": { "videoId": "9bZkp7q19f0" },
+      "snippet": {
+        "title": "Test Video 2 - Muse",
+        "description": "Another mock description",
+        "thumbnails": {
+          "medium": { "url": "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg" }
+        },
+        "channelTitle": "Mock Channel"
+      }
+    }
+  ]
+}
