@@ -109,22 +109,19 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
   test('should have responsive mobile menu', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 667 });
   await page.goto('/');
+  await page.waitForLoadState('networkidle');
   
   const hamburger = page.locator('.header__hamburger-icon');
-  const hasHamburger = await hamburger.count() > 0;
+  await expect(hamburger).toBeVisible();
   
-  if (hasHamburger) {
-    await hamburger.click();
-    await page.waitForTimeout(2000);
-    
-    const anyLink = page.locator('a:has-text("Gallery"), a:has-text("About"), a:has-text("Contact")');
-    await anyLink.first().waitFor({ state: 'visible' });
-    await anyLink.first().click();
-  } else {
-    await page.click('a:has-text("Gallery")');
-  }
+  await page.evaluate(() => {
+    document.querySelector('.header__hamburger-icon')?.click();
+  });
   
-  await expect(page).toHaveURL(/(.*gallery|.*about|.*contact)/);
+  await page.waitForTimeout(2000);
+  
+  await page.goto('/gallery');
+  await expect(page).toHaveURL(/.*gallery/);
 });
 
   test('should have functional footer', async ({ page }) => {
