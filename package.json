@@ -58,5 +58,8 @@
     "jest-fetch-mock": "^3.0.3",
     "prettier": "^3.6.2",
     "vite": "^7.1.10"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
