@@ -163,7 +163,7 @@ describe('AppContext', () => {
     
     expect(() => {
       render(<TestComponent />);
-    }).toThrow('useApp must be used within a AppProvider');
+    }).toThrow('useApp must be used within an AppProvider');
     
     consoleError.mockRestore();
   });
