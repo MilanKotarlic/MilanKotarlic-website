@@ -9,6 +9,7 @@ const APP_ACTIONS = {
   CLEAR_CURRENT_VIDEO: 'CLEAR_CURRENT_VIDEO'
 };
 
+
 const appReducer = (state, action) => {
   switch (action.type) {
     case APP_ACTIONS.FETCH_START:
