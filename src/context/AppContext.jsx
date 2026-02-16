@@ -12,34 +12,15 @@ const APP_ACTIONS = {
 const appReducer = (state, action) => {
   switch (action.type) {
     case APP_ACTIONS.FETCH_START:
-      return {
-        ...state,
-        loading: true,
-        error: null
-      };
+      return { ...state, loading: true, error: null };
     case APP_ACTIONS.FETCH_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        videos: action.payload,
-        error: null
-      };
+      return { ...state, loading: false, videos: action.payload, error: null };
     case APP_ACTIONS.FETCH_ERROR:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload
-      };
+      return { ...state, loading: false, error: action.payload };
     case APP_ACTIONS.SET_CURRENT_VIDEO:
-      return {
-        ...state,
-        currentVideo: action.payload
-      };
+      return { ...state, currentVideo: action.payload };
     case APP_ACTIONS.CLEAR_CURRENT_VIDEO:
-      return {
-        ...state,
-        currentVideo: null
-      };
+      return { ...state, currentVideo: null };
     default:
       return state;
   }
@@ -60,35 +41,39 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
+
+      const isE2E = import.meta.env.VITE_NODE_ENV === 'e2e';
+
+      if (isE2E) {
+        const mockVideos = [
+          {
+            id: 'mock1',
+            videoId: 'dQw4w9WgXcQ',
+            title: 'Mock Video 1',
+            thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
+          },
+          {
+            id: 'mock2',
+            videoId: '9bZkp7q19f0',
+            title: 'Mock Video 2',
+            thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg'
+          }
+        ];
+        dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: mockVideos });
+        return;
+      }
+
       try {
-        const isTestEnv = import.meta.env.VITE_NODE_ENV === 'test' || !import.meta.env.VITE_YOUTUBE_API_KEY;
-        if (isTestEnv) {
-          const mockVideos = [
-            {
-              id: 'mock1',
-              videoId: 'dQw4w9WgXcQ',
-              title: 'Mock Video 1',
-              thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
-            },
-            {
-              id: 'mock2',
-              videoId: '9bZkp7q19f0',
-              title: 'Mock Video 2',
-              thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg'
-            }
-          ];
-          dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: mockVideos });
-          return;
-        }
         const videos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
         dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: videos });
       } catch (error) {
-        dispatch({ 
-          type: APP_ACTIONS.FETCH_ERROR, 
-          payload: 'Failed to load videos from YouTube' 
+        dispatch({
+          type: APP_ACTIONS.FETCH_ERROR,
+          payload: 'Failed to load videos from YouTube'
         });
       }
     };
+
     fetchVideos();
   }, []);
 
@@ -109,18 +94,12 @@ export const AppProvider = ({ children }) => {
     clearCurrentVideo
   };
 
-  return (
-    <AppContext.Provider value={value}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 export const useApp = () => {
   const context = useContext(AppContext);
-  if (!context) {
-    throw new Error('useApp must be used within a AppProvider');
-  }
+  if (!context) throw new Error('useApp must be used within a AppProvider');
   return context;
 };
 

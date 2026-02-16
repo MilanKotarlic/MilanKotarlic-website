@@ -23,7 +23,7 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'npm run dev',
+    command: 'VITE_NODE_ENV=e2e npm run dev',
     url: 'http://localhost:5173',
     reuseExistingServer: true,
     timeout: 120 * 1000,
