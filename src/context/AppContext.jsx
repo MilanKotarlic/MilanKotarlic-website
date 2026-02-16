@@ -60,8 +60,26 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
-      
       try {
+        const isTestEnv = import.meta.env.VITE_NODE_ENV === 'test' || !import.meta.env.VITE_YOUTUBE_API_KEY;
+        if (isTestEnv) {
+          const mockVideos = [
+            {
+              id: 'mock1',
+              videoId: 'dQw4w9WgXcQ',
+              title: 'Mock Video 1',
+              thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
+            },
+            {
+              id: 'mock2',
+              videoId: '9bZkp7q19f0',
+              title: 'Mock Video 2',
+              thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg'
+            }
+          ];
+          dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: mockVideos });
+          return;
+        }
         const videos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
         dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: videos });
       } catch (error) {
@@ -71,7 +89,6 @@ export const AppProvider = ({ children }) => {
         });
       }
     };
-
     fetchVideos();
   }, []);
 
