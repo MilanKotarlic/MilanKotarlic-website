@@ -9,7 +9,6 @@ const APP_ACTIONS = {
   CLEAR_CURRENT_VIDEO: 'CLEAR_CURRENT_VIDEO'
 };
 
-
 const appReducer = (state, action) => {
   switch (action.type) {
     case APP_ACTIONS.FETCH_START:
@@ -42,43 +41,40 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
-
-      const isE2E = process.env.VITE_NODE_ENV === 'e2e';
-      console.log('🔍 AppContext - VITE_NODE_ENV:', process.env.VITE_NODE_ENV);
-      console.log('🔍 AppContext - isE2E:', isE2E);
-
-      if (isE2E) {
-        console.log('✅ Using MOCK videos for E2E');
-        const mockVideos = [
-          {
-            id: 'mock1',
-            videoId: 'dQw4w9WgXcQ',
-            title: 'Mock Video 1',
-            thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
-          },
-          {
-            id: 'mock2',
-            videoId: '9bZkp7q19f0',
-            title: 'Mock Video 2',
-            thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg'
-          }
-        ];
-
-        dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: mockVideos });
-        return;
-      }
-
       try {
+        const isTestEnv = 
+          (typeof import.meta !== 'undefined' && import.meta.env?.VITE_NODE_ENV === 'test') ||
+          process.env.VITE_NODE_ENV === 'test' ||
+          !import.meta.env?.VITE_YOUTUBE_API_KEY;
+
+        if (isTestEnv) {
+          const mockVideos = [
+            {
+              id: 'mock1',
+              videoId: 'dQw4w9WgXcQ',
+              title: 'Mock Video 1',
+              thumbnail: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg'
+            },
+            {
+              id: 'mock2',
+              videoId: '9bZkp7q19f0',
+              title: 'Mock Video 2',
+              thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg'
+            }
+          ];
+          dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: mockVideos });
+          return;
+        }
+
         const videos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
         dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: videos });
       } catch (error) {
-        dispatch({
-          type: APP_ACTIONS.FETCH_ERROR,
-          payload: 'Failed to load videos from YouTube'
+        dispatch({ 
+          type: APP_ACTIONS.FETCH_ERROR, 
+          payload: 'Failed to load videos from YouTube' 
         });
       }
     };
-
     fetchVideos();
   }, []);
 
@@ -90,17 +86,17 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: APP_ACTIONS.CLEAR_CURRENT_VIDEO });
   };
 
+  const value = {
+    videos: state.videos,
+    loading: state.loading,
+    error: state.error,
+    currentVideo: state.currentVideo,
+    setCurrentVideo,
+    clearCurrentVideo
+  };
+
   return (
-    <AppContext.Provider
-      value={{
-        videos: state.videos,
-        loading: state.loading,
-        error: state.error,
-        currentVideo: state.currentVideo,
-        setCurrentVideo,
-        clearCurrentVideo
-      }}
-    >
+    <AppContext.Provider value={value}>
       {children}
     </AppContext.Provider>
   );
