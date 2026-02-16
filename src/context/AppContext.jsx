@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import YouTubeService from '../api/YouTubeService';
+import { getEnv, hasImportMeta } from '../utils/env';
 
 const APP_ACTIONS = {
   FETCH_START: 'FETCH_START',
@@ -42,12 +43,11 @@ export const AppProvider = ({ children }) => {
     const fetchVideos = async () => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
       try {
-        const isTestEnv = 
-          (typeof import.meta !== 'undefined' && import.meta.env?.VITE_NODE_ENV === 'test') ||
-          process.env.VITE_NODE_ENV === 'test' ||
-          !import.meta.env?.VITE_YOUTUBE_API_KEY;
+        const env = getEnv();
+        const isTest = env.VITE_NODE_ENV === 'test';
+        const useMock = isTest || !env.VITE_YOUTUBE_API_KEY;
 
-        if (isTestEnv) {
+        if (useMock) {
           const mockVideos = [
             {
               id: 'mock1',
