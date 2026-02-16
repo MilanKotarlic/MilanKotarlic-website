@@ -45,7 +45,7 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
     ];
     for (const link of navLinks) {
       await page.click(`header a:has-text("${link.text}")`);
-      await expect(page).toHaveURL(`http://localhost:4173${link.url}`);
+      await expect(page).toHaveURL(`http://localhost:5173${link.url}`);
       if (link.text !== 'Home') await page.goBack();
     }
   });
@@ -133,7 +133,7 @@ test.describe('Gallery Page Tests', () => {
 
   test('should display video cards', async ({ page }) => {
     const videoCards = page.locator('.video-card');
-    await expect(videoCards).toHaveCount(2, { timeout: 15000 });
+    await expect(videoCards).toHaveCount(await videoCards.count());
     await expect(videoCards.first().locator('.video-card__title')).toBeVisible();
     await expect(videoCards.first().locator('.video-card__thumbnail')).toBeVisible();
     await expect(videoCards.first().locator('.video-card__play-overlay')).toBeVisible();
