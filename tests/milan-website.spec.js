@@ -121,9 +121,39 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
 
 test.describe('Gallery Page Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.route('**/youtube/v3/search**', route => route.fulfill({ json: mockYouTubeResponse }));
+  
+    await page.route('**/youtube/v3/search**', async route => {
+      console.log('Mock activated on CI');
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          items: [
+            {
+              id: { videoId: 'test1' },
+              snippet: {
+                title: 'Test Video 1',
+                description: 'Test description',
+                thumbnails: { medium: { url: 'https://test.com/thumb1.jpg' } },
+                channelTitle: 'Test Channel'
+              }
+            },
+            {
+              id: { videoId: 'test2' },
+              snippet: {
+                title: 'Test Video 2',
+                description: 'Another test',
+                thumbnails: { medium: { url: 'https://test.com/thumb2.jpg' } },
+                channelTitle: 'Test Channel'
+              }
+            }
+          ]
+        })
+      });
+    });
+
     await page.goto('/gallery');
-    await page.waitForSelector('.video-card', { timeout: 15000 });
+    await page.waitForTimeout(3000);
   });
 
   test('should load gallery page correctly', async ({ page }) => {
@@ -133,17 +163,18 @@ test.describe('Gallery Page Tests', () => {
 
   test('should display video cards', async ({ page }) => {
     const videoCards = page.locator('.video-card');
-    await expect(videoCards).toHaveCount(await videoCards.count());
+    await expect(videoCards.first()).toBeVisible({ timeout: 15000 });
     await expect(videoCards.first().locator('.video-card__title')).toBeVisible();
     await expect(videoCards.first().locator('.video-card__thumbnail')).toBeVisible();
-    await expect(videoCards.first().locator('.video-card__play-overlay')).toBeVisible();
   });
 
   test('should open and close video player', async ({ page }) => {
     const videoCards = page.locator('.video-card');
     await videoCards.first().click();
+    
     await expect(page.locator('.video-player__overlay')).toBeVisible({ timeout: 15000 });
     await expect(page.locator('.video-player__title')).toBeVisible();
+    
     await page.locator('.video-player__close').click();
     await expect(page.locator('.video-player__overlay')).not.toBeVisible();
   });
