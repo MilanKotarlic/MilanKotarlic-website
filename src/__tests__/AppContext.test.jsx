@@ -40,6 +40,8 @@ describe('AppContext', () => {
   });
 
   test('provides initial state', async () => {
+    YouTubeService.getChannelUploads.mockResolvedValue([]);
+    
     await act(async () => {
       render(
         <AppProvider>
@@ -52,12 +54,19 @@ describe('AppContext', () => {
       expect(screen.getByTestId('loading')).toHaveTextContent('false');
     });
 
-    expect(screen.getByTestId('videos-count')).toHaveTextContent('2');
+    expect(screen.getByTestId('videos-count')).toHaveTextContent('0');
     expect(screen.getByTestId('error')).toHaveTextContent('no-error');
     expect(screen.getByTestId('current-video')).toHaveTextContent('no-video');
   });
 
   test('fetches videos on mount', async () => {
+    const mockVideos = [
+      { id: '1', title: 'Video 1' },
+      { id: '2', title: 'Video 2' }
+    ];
+    
+    YouTubeService.getChannelUploads.mockResolvedValue(mockVideos);
+
     await act(async () => {
       render(
         <AppProvider>
@@ -65,6 +74,8 @@ describe('AppContext', () => {
         </AppProvider>
       );
     });
+
+    expect(YouTubeService.getChannelUploads).toHaveBeenCalledWith('TheMilanKotarlic');
 
     await waitFor(() => {
       expect(screen.getByTestId('videos-count')).toHaveTextContent('2');
@@ -72,11 +83,26 @@ describe('AppContext', () => {
     });
   });
 
-  test.skip('handles fetch error', async () => {
-  console.log('Skipping error test - mock works correctly');
-});
+  test('handles fetch error', async () => {
+    YouTubeService.getChannelUploads.mockRejectedValue(new Error('API Error'));
+
+    await act(async () => {
+      render(
+        <AppProvider>
+          <TestComponent />
+        </AppProvider>
+      );
+    });
+
+    await waitFor(() => {
+      expect(screen.getByTestId('error')).toHaveTextContent('Failed to load videos from YouTube');
+      expect(screen.getByTestId('loading')).toHaveTextContent('false');
+    });
+  });
 
   test('setCurrentVideo updates current video', async () => {
+    YouTubeService.getChannelUploads.mockResolvedValue([]);
+    
     await act(async () => {
       render(
         <AppProvider>
@@ -98,6 +124,8 @@ describe('AppContext', () => {
   });
 
   test('clearCurrentVideo clears current video', async () => {
+    YouTubeService.getChannelUploads.mockResolvedValue([]);
+    
     await act(async () => {
       render(
         <AppProvider>
