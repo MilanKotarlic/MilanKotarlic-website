@@ -44,8 +44,11 @@ export const AppProvider = ({ children }) => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
 
       const isE2E = process.env.VITE_NODE_ENV === 'e2e';
+      console.log('🔍 AppContext - VITE_NODE_ENV:', process.env.VITE_NODE_ENV);
+      console.log('🔍 AppContext - isE2E:', isE2E);
 
       if (isE2E) {
+        console.log('✅ Using MOCK videos for E2E');
         const mockVideos = [
           {
             id: 'mock1',
