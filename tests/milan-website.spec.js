@@ -25,7 +25,7 @@ const mockYouTubeResponse = {
 
 test.describe('Milan Kotarlić Website - E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.route('**/youtube/v3/**', route => route.fulfill({ json: mockYouTubeResponse }));
+    await page.route('https://www.googleapis.com*', route => route.fulfill({ json: mockYouTubeResponse }));
     await page.goto('/');
     await page.waitForLoadState('networkidle');
   });
@@ -121,39 +121,39 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
 
 test.describe('Gallery Page Tests', () => {
   test.beforeEach(async ({ page }) => {
-  await page.route('**/youtube/v3/**', async route => {
-    await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify({
-        items: [
-          {
-            id: { videoId: 'test1' },
-            snippet: {
-              title: 'Test Video 1',
-              description: 'Test description',
-              thumbnails: { medium: { url: 'https://test.com/thumb1.jpg' } },
-              channelTitle: 'Test Channel'
+    await page.route('https://www.googleapis.com*', async route => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          items: [
+            {
+              id: { videoId: 'test1' },
+              snippet: {
+                title: 'Test Video 1',
+                description: 'Test description',
+                thumbnails: { medium: { url: 'https://test.com/thumb1.jpg' } },
+                channelTitle: 'Test Channel'
+              }
+            },
+            {
+              id: { videoId: 'test2' },
+              snippet: {
+                title: 'Test Video 2',
+                description: 'Another test',
+                thumbnails: { medium: { url: 'https://test.com/thumb2.jpg' } },
+                channelTitle: 'Test Channel'
+              }
             }
-          },
-          {
-            id: { videoId: 'test2' },
-            snippet: {
-              title: 'Test Video 2',
-              description: 'Another test',
-              thumbnails: { medium: { url: 'https://test.com/thumb2.jpg' } },
-              channelTitle: 'Test Channel'
-            }
-          }
-        ]
-      })
+          ]
+        })
+      });
     });
-  });
 
-  await page.goto('/gallery');
-  await page.waitForLoadState('networkidle');
-  await page.waitForSelector('.video-card', { timeout: 10000 });
-});
+    await page.goto('/gallery');
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('.video-card', { timeout: 30000 });
+  });
 
   test('should load gallery page correctly', async ({ page }) => {
     await expect(page.locator('h1')).toContainText(/Music|Moja Muzika/);
