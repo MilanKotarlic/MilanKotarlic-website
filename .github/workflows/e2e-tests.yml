@@ -32,6 +32,8 @@ jobs:
       run: npm run build
     
     - name: Run E2E Tests
+      env:
+        VITE_NODE_ENV: e2e
       run: |
         lsof -ti:4173 | xargs kill -9 2>/dev/null || true
         npm run preview &
