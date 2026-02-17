@@ -99,8 +99,26 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
 
 test.describe('Gallery Page Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.route('https://www.googleapis.com*', async route => {
-      console.log('✅ Intercepted YouTube API call');
+    await page.route('**/youtube/v3/channels**', async route => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          items: [
+            {
+              id: "UCsaYUfVMS7y74eUOMBJ4tAg",
+              contentDetails: {
+                relatedPlaylists: {
+                  uploads: "UUsaYUfVMS7y74eUOMBJ4tAg"
+                }
+              }
+            }
+          ]
+        })
+      });
+    });
+
+    await page.route('**/youtube/v3/playlistItems**', async route => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -115,14 +133,10 @@ test.describe('Gallery Page Tests', () => {
     await page.goto('/gallery');
     await page.waitForLoadState('networkidle');
     
-    await page.waitForTimeout(5000);
-    const content = await page.content();
-    console.log('Page contains video-card:', content.includes('video-card'));
-    
-   await page.waitForFunction(() => {
-  const cards = document.querySelectorAll('.video-card');
-  return cards.length > 0 && cards[0].offsetParent !== null;
-}, { timeout: 30000 });
+    await page.waitForFunction(() => {
+      const cards = document.querySelectorAll('.video-card');
+      return cards.length > 0 && cards[0].offsetParent !== null;
+    }, { timeout: 30000 });
   });
 
   test('should load gallery page correctly', async ({ page }) => {
