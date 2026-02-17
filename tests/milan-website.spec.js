@@ -119,7 +119,10 @@ test.describe('Gallery Page Tests', () => {
     const content = await page.content();
     console.log('Page contains video-card:', content.includes('video-card'));
     
-    await page.waitForSelector('.video-card', { timeout: 30000 });
+   await page.waitForFunction(() => {
+  const cards = document.querySelectorAll('.video-card');
+  return cards.length > 0 && cards[0].offsetParent !== null;
+}, { timeout: 30000 });
   });
 
   test('should load gallery page correctly', async ({ page }) => {
