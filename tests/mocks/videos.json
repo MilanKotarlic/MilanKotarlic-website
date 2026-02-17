@@ -1,4 +1,4 @@
-export const mockYouTubeVideosResponse = {
+{
   "kind": "youtube#playlistItemListResponse",
   "etag": "PDI5OuWuCCXIjmDawXm9rfCwQ_E",
   "nextPageToken": "EAAaHlBUOkNBd2lFRVUxUkVNd1FqQTJPREUwTkVVeVF6aw",
@@ -296,4 +296,4 @@ export const mockYouTubeVideosResponse = {
     "totalResults": 43,
     "resultsPerPage": 12
   }
-};
+}
