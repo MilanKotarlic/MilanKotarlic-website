@@ -1,31 +1,9 @@
 import { test, expect } from '@playwright/test';
-
-const mockYouTubeResponse = {
-  items: [
-    {
-      id: { videoId: 'test1' },
-      snippet: {
-        title: 'Test Video 1',
-        description: 'Test description',
-        thumbnails: { medium: { url: 'https://test.com/thumb1.jpg' } },
-        channelTitle: 'Test Channel'
-      }
-    },
-    {
-      id: { videoId: 'test2' },
-      snippet: {
-        title: 'Test Video 2',
-        description: 'Another test',
-        thumbnails: { medium: { url: 'https://test.com/thumb2.jpg' } },
-        channelTitle: 'Test Channel'
-      }
-    }
-  ]
-};
+import mockVideos from './mocks/videos.json' assert { type: 'json' };
 
 test.describe('Milan Kotarlić Website - E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.route('https://www.googleapis.com*', route => route.fulfill({ json: mockYouTubeResponse }));
+    await page.route('https://www.googleapis.com*', route => route.fulfill({ json: mockVideos }));
     await page.goto('/');
     await page.waitForLoadState('networkidle');
   });
@@ -125,28 +103,7 @@ test.describe('Gallery Page Tests', () => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
-        body: JSON.stringify({
-          items: [
-            {
-              id: { videoId: 'test1' },
-              snippet: {
-                title: 'Test Video 1',
-                description: 'Test description',
-                thumbnails: { medium: { url: 'https://test.com/thumb1.jpg' } },
-                channelTitle: 'Test Channel'
-              }
-            },
-            {
-              id: { videoId: 'test2' },
-              snippet: {
-                title: 'Test Video 2',
-                description: 'Another test',
-                thumbnails: { medium: { url: 'https://test.com/thumb2.jpg' } },
-                channelTitle: 'Test Channel'
-              }
-            }
-          ]
-        })
+        body: JSON.stringify(mockVideos)
       });
     });
 

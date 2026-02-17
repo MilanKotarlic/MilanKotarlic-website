@@ -1,26 +1,299 @@
-{
+export const mockYouTubeVideosResponse = {
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "PDI5OuWuCCXIjmDawXm9rfCwQ_E",
+  "nextPageToken": "EAAaHlBUOkNBd2lFRVUxUkVNd1FqQTJPREUwTkVVeVF6aw",
   "items": [
     {
-      "id": { "videoId": "dQw4w9WgXcQ" },
+      "kind": "youtube#playlistItem",
+      "etag": "XtkcaWTdiwr9Cj0bfAC5DPx7Q5o",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLnBPMUlFRU03VkVn",
       "snippet": {
-        "title": "Test Video 1 - Iron Maiden",
-        "description": "Mock description for testing",
+        "publishedAt": "2026-02-12T18:13:06Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Atomsko Skloniste - Devojka Broj 8 #guitar #guitarsolo #exyurock #atomskoskloniste #rock #drums",
+        "description": "",
         "thumbnails": {
-          "medium": { "url": "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg" }
+          "default": { "url": "https://i.ytimg.com/vi/pO1IEEM7VEg/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/pO1IEEM7VEg/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/pO1IEEM7VEg/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/pO1IEEM7VEg/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/pO1IEEM7VEg/maxresdefault.jpg", "width": 1280, "height": 720 }
         },
-        "channelTitle": "Mock Channel"
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 0,
+        "resourceId": { "kind": "youtube#video", "videoId": "pO1IEEM7VEg" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
       }
     },
     {
-      "id": { "videoId": "9bZkp7q19f0" },
+      "kind": "youtube#playlistItem",
+      "etag": "TD3Gf_7HVVnccos8jfDHK9HrKzE",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLndJVzJETVlOdGo4",
       "snippet": {
-        "title": "Test Video 2 - Muse",
-        "description": "Another mock description",
+        "publishedAt": "2026-02-09T17:18:17Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Atomsko Skloniste - Devojka broj 8 - cover by MilanKotarlic",
+        "description": "Jedna classic rock domaca pesma, jedna od najboljih po mom misljenju.",
         "thumbnails": {
-          "medium": { "url": "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg" }
+          "default": { "url": "https://i.ytimg.com/vi/wIW2DMYNtj8/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/wIW2DMYNtj8/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/wIW2DMYNtj8/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/wIW2DMYNtj8/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/wIW2DMYNtj8/maxresdefault.jpg", "width": 1280, "height": 720 }
         },
-        "channelTitle": "Mock Channel"
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 1,
+        "resourceId": { "kind": "youtube#video", "videoId": "wIW2DMYNtj8" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-upLlxb5Kx3sqLjig5vdid29D70",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLmxFay1RdWlTcHBv",
+      "snippet": {
+        "publishedAt": "2025-12-22T10:58:48Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Iron Maiden - The Trooper #guitar #bass #drums #vocals #guitarsolo #metal #ironmaiden",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/lEk-QuiSppo/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/lEk-QuiSppo/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/lEk-QuiSppo/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/lEk-QuiSppo/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/lEk-QuiSppo/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 2,
+        "resourceId": { "kind": "youtube#video", "videoId": "lEk-QuiSppo" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "MFhqs4oTXYHedLjwexnL4hHy53w",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLnlYRkhMLVBTb2dV",
+      "snippet": {
+        "publishedAt": "2025-12-09T18:53:57Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Muse - Hysteria #music #guitar #bass #drums #muse #vocals #cover #studio",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/yXFHL-PSogU/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/yXFHL-PSogU/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/yXFHL-PSogU/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/yXFHL-PSogU/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/yXFHL-PSogU/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 3,
+        "resourceId": { "kind": "youtube#video", "videoId": "yXFHL-PSogU" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "wM0lEj_KbWf-NuNZxgdc7RBazgY",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLlZ3RVRXUHhlLTRv",
+      "snippet": {
+        "publishedAt": "2025-12-08T15:01:05Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Muse - Hysteria by Milan Kotarlic 4K",
+        "description": "My home studio version of awesome song hysteria by muse, hope you like it.",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/VwETWPxe-4o/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/VwETWPxe-4o/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/VwETWPxe-4o/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/VwETWPxe-4o/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/VwETWPxe-4o/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 4,
+        "resourceId": { "kind": "youtube#video", "videoId": "VwETWPxe-4o" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "p3-pVCbix5IrHQVUMlG4s8IMKuY",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLjBkNUt5cERkVldB",
+      "snippet": {
+        "publishedAt": "2025-11-19T19:41:57Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Is this love - guitar solo #whitesnake #guitar #guitarsolo #guitarcover #guitarplayer #paulreedsmith",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/0d5KypDdVWA/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/0d5KypDdVWA/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/0d5KypDdVWA/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/0d5KypDdVWA/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/0d5KypDdVWA/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 5,
+        "resourceId": { "kind": "youtube#video", "videoId": "0d5KypDdVWA" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "v0H1GRHAOWhq4NhXBEUNpvQY2kI",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLjFUamtSSGlLRDJF",
+      "snippet": {
+        "publishedAt": "2025-10-13T17:51:30Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Bad love - cover by MilanKotarlic #vocals #music #drums #bassguitar #drummer #guitar #guitarcover",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/1TjkRHiKD2E/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/1TjkRHiKD2E/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/1TjkRHiKD2E/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/1TjkRHiKD2E/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/1TjkRHiKD2E/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 6,
+        "resourceId": { "kind": "youtube#video", "videoId": "1TjkRHiKD2E" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "QKF1vDIWpye2Z38KiSMt_dgFhPY",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLk4yUC1OSi1DUWR3",
+      "snippet": {
+        "publishedAt": "2025-10-04T21:34:34Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Eric Clapton - Bad Love cover by Milan Kotarlic",
+        "description": "My version of Eric Clapton's Bad Love, played all instruments. Hope you enjoy! :)\n\n\n#drums #music #drummer #guitar #ericclapton #vocals #bassguitar #guitarra #guitarplayer #studio #homestudio #cover #coversong #onemanband",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/N2P-NJ-CQdw/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/N2P-NJ-CQdw/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/N2P-NJ-CQdw/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/N2P-NJ-CQdw/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/N2P-NJ-CQdw/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 7,
+        "resourceId": { "kind": "youtube#video", "videoId": "N2P-NJ-CQdw" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "XoiR9I1Vve6EIvOJvHAqSGJcJl8",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLjJVc1ZWQndST0Fr",
+      "snippet": {
+        "publishedAt": "2025-08-24T14:10:14Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Queen - somebody to love - acapella intro #queen #queenband #freddiemercury #acapella #vocals",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/2UsVVBwROAk/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/2UsVVBwROAk/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/2UsVVBwROAk/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/2UsVVBwROAk/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/2UsVVBwROAk/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 8,
+        "resourceId": { "kind": "youtube#video", "videoId": "2UsVVBwROAk" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "G31Y4__oqq_o83XGIc9KB3OB1ds",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLll4bWFzY291dElF",
+      "snippet": {
+        "publishedAt": "2025-07-11T16:57:54Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Toto - Africa - cover #basscover #guitar #music #toto #cover #drums #africa #percussion #vocalcover",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/YxmascoutIE/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/YxmascoutIE/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/YxmascoutIE/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/YxmascoutIE/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/YxmascoutIE/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 9,
+        "resourceId": { "kind": "youtube#video", "videoId": "YxmascoutIE" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "aqaTRLJqYpqDbjy-ZXpw7OVeaM0",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLlZna0ZLandHczRV",
+      "snippet": {
+        "publishedAt": "2025-07-03T17:46:39Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "Toto - Africa by Milan Kotarlic",
+        "description": "This is my interpretation of one of the best songs ever made. Enjoy!\n\nCheck my other videos and shorts.\n\nSubscribe to not to miss any upcoming work! :)\nFollow me on other social media:\nhttps://www.instagram.com/milan_kotarlic/\nhttps://www.tiktok.com/@chika_m1lan\nhttps://www.facebook.com/KotarlicMilan\n\n@TOTO #toto #totoafrica #guitar #vocalcover #guitarcover #basscover #drumcover #percussion #musicproduction #harmony #vocalharmony #music #guitarist #keyboard #synth #multiinstrumentalist",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/VgkFKjwGs4U/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/VgkFKjwGs4U/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/VgkFKjwGs4U/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/VgkFKjwGs4U/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/VgkFKjwGs4U/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 10,
+        "resourceId": { "kind": "youtube#video", "videoId": "VgkFKjwGs4U" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "n0n8NT6Yo6DR_RnrGxZyO_mwStY",
+      "id": "VVVzYVlVZlZNUzd5NzRlVU9NQko0dEFnLmJwSXJPczRzcDI4",
+      "snippet": {
+        "publishedAt": "2025-06-10T21:21:57Z",
+        "channelId": "UCsaYUfVMS7y74eUOMBJ4tAg",
+        "title": "World to change #guitar #basscover #music #bassguitar #guitarsolo #guitarcover @florijannadj1013",
+        "description": "",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/bpIrOs4sp28/default.jpg", "width": 120, "height": 90 },
+          "medium": { "url": "https://i.ytimg.com/vi/bpIrOs4sp28/mqdefault.jpg", "width": 320, "height": 180 },
+          "high": { "url": "https://i.ytimg.com/vi/bpIrOs4sp28/hqdefault.jpg", "width": 480, "height": 360 },
+          "standard": { "url": "https://i.ytimg.com/vi/bpIrOs4sp28/sddefault.jpg", "width": 640, "height": 480 },
+          "maxres": { "url": "https://i.ytimg.com/vi/bpIrOs4sp28/maxresdefault.jpg", "width": 1280, "height": 720 }
+        },
+        "channelTitle": "Milan Kotarlic",
+        "playlistId": "UUsaYUfVMS7y74eUOMBJ4tAg",
+        "position": 11,
+        "resourceId": { "kind": "youtube#video", "videoId": "bpIrOs4sp28" },
+        "videoOwnerChannelTitle": "Milan Kotarlic",
+        "videoOwnerChannelId": "UCsaYUfVMS7y74eUOMBJ4tAg"
       }
     }
-  ]
-}
+  ],
+  "pageInfo": {
+    "totalResults": 43,
+    "resultsPerPage": 12
+  }
+};
