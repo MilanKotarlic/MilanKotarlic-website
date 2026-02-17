@@ -100,6 +100,7 @@ test.describe('Milan Kotarlić Website - E2E Tests', () => {
 test.describe('Gallery Page Tests', () => {
   test.beforeEach(async ({ page }) => {
     await page.route('https://www.googleapis.com*', async route => {
+      console.log('✅ Intercepted YouTube API call');
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -107,8 +108,17 @@ test.describe('Gallery Page Tests', () => {
       });
     });
 
+    page.on('console', msg => {
+      if (msg.type() === 'error') console.log('❌ Browser error:', msg.text());
+    });
+
     await page.goto('/gallery');
     await page.waitForLoadState('networkidle');
+    
+    await page.waitForTimeout(5000);
+    const content = await page.content();
+    console.log('Page contains video-card:', content.includes('video-card'));
+    
     await page.waitForSelector('.video-card', { timeout: 30000 });
   });
 
