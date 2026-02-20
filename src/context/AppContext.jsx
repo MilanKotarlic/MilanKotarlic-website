@@ -12,34 +12,15 @@ const APP_ACTIONS = {
 const appReducer = (state, action) => {
   switch (action.type) {
     case APP_ACTIONS.FETCH_START:
-      return {
-        ...state,
-        loading: true,
-        error: null
-      };
+      return { ...state, loading: true, error: null };
     case APP_ACTIONS.FETCH_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        videos: action.payload,
-        error: null
-      };
+      return { ...state, loading: false, videos: action.payload, error: null };
     case APP_ACTIONS.FETCH_ERROR:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload
-      };
+      return { ...state, loading: false, error: action.payload };
     case APP_ACTIONS.SET_CURRENT_VIDEO:
-      return {
-        ...state,
-        currentVideo: action.payload
-      };
+      return { ...state, currentVideo: action.payload };
     case APP_ACTIONS.CLEAR_CURRENT_VIDEO:
-      return {
-        ...state,
-        currentVideo: null
-      };
+      return { ...state, currentVideo: null };
     default:
       return state;
   }
@@ -60,7 +41,6 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       dispatch({ type: APP_ACTIONS.FETCH_START });
-      
       try {
         const videos = await YouTubeService.getChannelUploads('TheMilanKotarlic');
         dispatch({ type: APP_ACTIONS.FETCH_SUCCESS, payload: videos });
@@ -71,7 +51,6 @@ export const AppProvider = ({ children }) => {
         });
       }
     };
-
     fetchVideos();
   }, []);
 
@@ -102,7 +81,9 @@ export const AppProvider = ({ children }) => {
 export const useApp = () => {
   const context = useContext(AppContext);
   if (!context) {
-    throw new Error('useApp must be used within a AppProvider');
+    throw new Error('useApp must be used within an AppProvider');
   }
   return context;
 };
+
+export { appReducer };
