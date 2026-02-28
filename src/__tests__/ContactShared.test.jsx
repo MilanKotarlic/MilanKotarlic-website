@@ -4,7 +4,6 @@ import Contact from '../components/shared/Contact/Contact';
 
 jest.mock('react-icons/fa', () => ({
   FaLinkedin: () => <span data-testid="linkedin-icon">LinkedInIcon</span>,
-  FaTwitter: () => <span data-testid="twitter-icon">TwitterIcon</span>,
   FaInstagram: () => <span data-testid="instagram-icon">InstagramIcon</span>,
   FaFacebook: () => <span data-testid="facebook-icon">FacebookIcon</span>,
   FaYoutube: () => <span data-testid="youtube-icon">YouTubeIcon</span>
@@ -77,7 +76,6 @@ describe('Contact Component (Shared)', () => {
     render(<Contact {...defaultProps} />);
     
     expect(screen.getByTestId('linkedin-icon')).toBeInTheDocument();
-    expect(screen.getByTestId('twitter-icon')).toBeInTheDocument();
     expect(screen.getByTestId('instagram-icon')).toBeInTheDocument();
     expect(screen.getByTestId('facebook-icon')).toBeInTheDocument();
     expect(screen.getByTestId('youtube-icon')).toBeInTheDocument();
@@ -87,7 +85,6 @@ describe('Contact Component (Shared)', () => {
     render(<Contact {...defaultProps} />);
     
     expect(screen.getByText('LinkedIn')).toBeInTheDocument();
-    expect(screen.getByText('Twitter')).toBeInTheDocument();
     expect(screen.getByText('Instagram')).toBeInTheDocument();
     expect(screen.getByText('Facebook')).toBeInTheDocument();
     expect(screen.getByText('YouTube')).toBeInTheDocument();

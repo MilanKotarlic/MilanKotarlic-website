@@ -30,23 +30,19 @@ const Contact = ({ title, subtitle, startProject }) => {
           <div className="contact__info-item">
             <h3>Social</h3>
             <div className="contact__social-links">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/milan-kotarlic-a723a396/">
                 <FaLinkedin />
                 <span>LinkedIn</span>
               </a>
-              <a href="#">
-                <FaTwitter />
-                <span>Twitter</span>
-              </a>
-              <a href="#">
+              <a href="https://www.instagram.com/milan_kotarlic/">
                 <FaInstagram />
                 <span>Instagram</span>
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/KotarlicMilan">
                 <FaFacebook />
                 <span>Facebook</span>
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/@TheMilanKotarlic">
                 <FaYoutube />
                 <span>YouTube</span>
               </a>
