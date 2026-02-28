@@ -22,7 +22,6 @@ describe('Contact Component (Shared)', () => {
     
     expect(screen.getByText('Contact Title')).toBeInTheDocument();
     expect(screen.getByText('Contact Subtitle')).toBeInTheDocument();
-    expect(screen.getByText('Start Project')).toBeInTheDocument();
     expect(screen.getByText('Email')).toBeInTheDocument();
     expect(screen.getByText('Phone')).toBeInTheDocument();
     expect(screen.getByText('Social')).toBeInTheDocument();
@@ -64,14 +63,14 @@ describe('Contact Component (Shared)', () => {
     render(<Contact {...defaultProps} />);
     
     expect(screen.getByText('Email')).toBeInTheDocument();
-    expect(screen.getByText('hello@squareup.com')).toBeInTheDocument();
+    expect(screen.getByText('milan.kotarlicsc21@gmail.com')).toBeInTheDocument();
   });
 
   test('renders phone information correctly', () => {
     render(<Contact {...defaultProps} />);
     
     expect(screen.getByText('Phone')).toBeInTheDocument();
-    expect(screen.getByText('+1 234 567 890')).toBeInTheDocument();
+    expect(screen.getByText('+381 60 0118254')).toBeInTheDocument();
   });
 
   test('renders social links with icons', () => {
@@ -92,13 +91,5 @@ describe('Contact Component (Shared)', () => {
     expect(screen.getByText('Instagram')).toBeInTheDocument();
     expect(screen.getByText('Facebook')).toBeInTheDocument();
     expect(screen.getByText('YouTube')).toBeInTheDocument();
-  });
-
-  test('start project button has correct class', () => {
-    render(<Contact {...defaultProps} />);
-    
-    const button = screen.getByRole('button', { name: 'Start Project' });
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveClass('contact__header-button');
   });
 });

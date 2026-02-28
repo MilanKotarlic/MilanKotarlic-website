@@ -166,7 +166,7 @@ test.describe('Gallery Page Tests', () => {
 test.describe('About Page Tests', () => {
   test.beforeEach(async ({ page }) => { await page.goto('/about'); await page.waitForLoadState('networkidle'); });
   test('should load about page correctly', async ({ page }) => {
-    await expect(page.locator('h1')).toContainText(/Hello I am Milan/);
+    await expect(page.locator('h1')).toContainText(/Hi, I'm Milan/);
     await expect(page.locator('.about__image')).toBeVisible();
     await expect(page.locator('.about__links')).toBeVisible();
     await expect(page.locator('.about__products')).toBeVisible();
@@ -182,7 +182,6 @@ test.describe('Contact Page Tests', () => {
   test('should load contact page correctly', async ({ page }) => {
     await expect(page.locator('h1')).toContainText(/Contact/);
     await expect(page.locator('.contact__info')).toBeVisible();
-    await expect(page.locator('.contact-page__form')).toBeVisible();
   });
   test('should have contact information', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Email' })).toBeVisible();
@@ -190,17 +189,14 @@ test.describe('Contact Page Tests', () => {
     await expect(page.getByRole('heading', { name: 'Location' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Connect With Me' })).toBeVisible();
   });
-  test('should fill contact form', async ({ page }) => {
-    await page.fill('input[placeholder*="Name"]', 'John Doe');
-    await page.fill('input[placeholder*="Email"]', 'john@example.com');
-    await page.fill('textarea', 'Test message for contact form');
-    await expect(page.locator('input[placeholder*="Name"]')).toHaveValue('John Doe');
-    await expect(page.locator('input[placeholder*="Email"]')).toHaveValue('john@example.com');
-    await expect(page.locator('textarea')).toHaveValue('Test message for contact form');
-    await page.click('button[type="submit"]');
-  });
-  test('should have start project button', async ({ page }) => {
-    await expect(page.locator('button:has-text("Start a Project")')).toBeVisible();
-    await page.click('button:has-text("Start a Project")');
-  });
+  // removing until we add mail service
+  // test('should fill contact form', async ({ page }) => {
+  //   await page.fill('input[placeholder*="Name"]', 'John Doe');
+  //   await page.fill('input[placeholder*="Email"]', 'john@example.com');
+  //   await page.fill('textarea', 'Test message for contact form');
+  //   await expect(page.locator('input[placeholder*="Name"]')).toHaveValue('John Doe');
+  //   await expect(page.locator('input[placeholder*="Email"]')).toHaveValue('john@example.com');
+  //   await expect(page.locator('textarea')).toHaveValue('Test message for contact form');
+  //   await page.click('button[type="submit"]');
+  // });
 });

@@ -1,51 +1,51 @@
 {
   "hero": {
-    "title": "A Digital Product Studio that will Work",
-    "subtitle": "For startups, enterprise leaders, media & publishers, and social good.",
-    "primaryButton": "Contact Us",
-    "secondaryButton": "Our Works"
+    "title": "Music. Energy. Passion.",
+    "subtitle": "Multi-instrumentalist creating covers and performances from my home studio. One place to find all my music and platforms.",
+    "primaryButton": "Watch My Videos",
+    "secondaryButton": "Follow Me"
   },
   "services": {
-    "title": "My Services",
-    "subtitle": "Professional solutions for your business",
+    "title": "What I Do",
+    "subtitle": "Music is my main language",
     "design": {
-      "title": "Design",
-      "description": "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences."
+      "title": "Guitar",
+      "description": "Electric and acoustic guitar covers, rhythm and lead parts, inspired by rock, pop, and everything in between. I love recreating tones and adding my own touch."
     },
     "engineering": {
-      "title": "Engineering",
-      "description": "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs."
+      "title": "Drums",
+      "description": "Groove-focused drum performances recorded in my home studio. From solid backbeats to energetic fills, drums are where I release the most energy."
     },
     "projectManagement": {
-      "title": "Project Management",
-      "description": "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process."
+      "title": "Vocals & Production",
+      "description": "I sing and record my performances in my home studio, handling recording, layering, and basic production to bring each cover to life."
     },
-    "learnMore": "Learn More"
+    "learnMore": "Explore More"
   },
   "whyChoose": {
-    "title": "Why Choose Me",
-    "subtitle": "Experience and quality you can trust",
+    "title": "Why Follow My Music",
+    "subtitle": "Real instruments. Real performances. Real passion.",
     "expertise": {
-      "title": "Expertise",
-      "description": "Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions."
+      "title": "Multi-Instrumentalist",
+      "description": "I play multiple instruments, which allows me to understand music from different perspectives and create more complete performances."
     },
     "clientCentric": {
-      "title": "Client-Centric Approach",
-      "description": "We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success."
+      "title": "Home Studio Sound",
+      "description": "All videos are recorded and produced in my personal home studio, where I experiment with tones, arrangements, and performance styles."
     },
     "resultsDriven": {
-      "title": "Results-Driven Solutions",
-      "description": "Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage."
+      "title": "Consistent Content",
+      "description": "I regularly upload new covers and performances, constantly improving my sound, technique, and production quality."
     },
     "collaborative": {
-      "title": "Collaborative Partnership",
-      "description": "We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive."
+      "title": "All Platforms in One Place",
+      "description": "This website connects my YouTube, Instagram, Facebook, TikTok, LinkedIn and more — so you can easily follow and support my journey."
     }
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Thank you for your Interest in SquareUp. We would love to hear from you and discuss how we can help bring your digital ideas to life.",
-    "startProject": "Start Project"
+    "title": "Let’s Connect",
+    "subtitle": "If you enjoy my music, want to collaborate, or just want to say hi — feel free to reach out.",
+    "startProject": "Get in Touch"
   },
   "navigation": {
     "home": "Home",
@@ -54,40 +54,39 @@
     "contact": "Contact"
   },
   "gallery": {
-  "title": "My Music",
-  "subtitle": "Here you can find all my latest music videos and performances",
-  "videos": {
-    "video1": {
-      "title": "Milan Kotarlić - Song 1"
-    },
-    "video2": {
-      "title": "Milan Kotarlić - Song 2"
-    },
-    "video3": {
-      "title": "Milan Kotarlić - Song 3"
+    "title": "My Music",
+    "subtitle": "Latest covers and performances from my YouTube channel",
+    "videos": {
+      "video1": {
+        "title": "Guitar Cover Performance"
+      },
+      "video2": {
+        "title": "Drum Cover Performance"
+      },
+      "video3": {
+        "title": "Vocal & Full Band Cover"
+      }
     }
-  }
-},
-
+  },
   "about": {
     "title": "About Me",
-    "greeting": "Hello I am Milan",
-    "description": "A passionate digital creator with expertise in web development, design, and content creation. I love turning ideas into reality through code and creativity.",
-    "links": "My Links",
-    "products": "My Products",
+    "greeting": "Hi, I'm Milan",
+    "description": "I'm a passionate multi-instrumentalist and vocalist who records and produces music from my home studio. I mainly create covers, playing guitar, drums, and singing. This website is a central place where you can find all my music and connect with me across platforms.",
+    "links": "Find Me Online",
+    "products": "My Music",
     "youtubeChannel": "YouTube Channel",
-    "youtubeDescription": "Check out my latest videos and tutorials on web development, design, and technology.",
+    "youtubeDescription": "Watch my latest covers, full performances, and studio recordings.",
     "linkedin": "LinkedIn",
-    "github": "GitHub",
+    "tiktok": "TikTok",
     "facebook": "Facebook",
     "instagram": "Instagram"
   },
   "contactPage": {
     "title": "Contact",
-    "subtitle": "Get in touch with me for collaborations, projects, or just to say hello!",
-    "letsWork": "Let's Work Together",
-    "projectDescription": "Have a project in mind? Let's discuss how we can bring your ideas to life.",
-    "startProject": "Start a Project",
+    "subtitle": "Open for collaborations, music projects, or just connecting with fellow musicians.",
+    "letsWork": "Let’s Create Something",
+    "projectDescription": "Have a song idea, collaboration proposal, or performance opportunity? Let’s talk.",
+    "startProject": "Send a Message",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
@@ -98,5 +97,4 @@
     "messagePlaceholder": "Your Message",
     "sendButton": "Send Message"
   }
-  
 }

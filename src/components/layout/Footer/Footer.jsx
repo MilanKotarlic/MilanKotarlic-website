@@ -12,30 +12,56 @@ const Footer = () => {
         <div className="footer__top">
           <div className="footer__logo-section">
             <div className="footer__logo">
-              <img src="/images/Logo.png" alt="SquareUp" className="footer__logo-image" />
-              <span className="footer__logo-text">SquareUp</span>
+              <img src="/images/Milan.jpg" alt="Milan" className="footer__logo-image" />
+              <span className="footer__logo-text">Milan Kotarlic</span>
             </div>
           </div>
 
           <nav className="footer__nav">
-            <Link to="/" className="footer__nav-link">{t('navigation.home')}</Link>
-            <Link to="/gallery" className="footer__nav-link">{t('navigation.gallery')}</Link>
-            <Link to="/contact" className="footer__nav-link">{t('navigation.contact')}</Link>
-            <a href="#why-choose" className="footer__nav-link">Why Choose</a>
-            <a href="#services" className="footer__nav-link">Services</a>
+            <Link to="/" className="footer__nav-link">
+              {t('navigation.home')}
+            </Link>
+            <Link to="/gallery" className="footer__nav-link">
+              {t('navigation.gallery')}
+            </Link>
+            <Link to="/contact" className="footer__nav-link">
+              {t('navigation.contact')}
+            </Link>
+            <Link to="/about" className="footer__nav-link">
+              {t('navigation.about')}
+            </Link>
           </nav>
         </div>
 
         <div className="footer__middle">
-          <h3 className="footer__stay-connected">Stay Connected</h3>
+          <h3 className="footer__stay-connected">
+            Follow My Music
+          </h3>
           <div className="footer__social">
-            <a href="#" className="footer__social-link">
+            <a
+              href="https://www.facebook.com/KotarlicMilan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" className="footer__social-link">
+
+            <a
+              href="https://www.linkedin.com/in/milan-kotarlic-a723a396/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+            >
               <FaLinkedinIn />
             </a>
-            <a href="#" className="footer__social-link">
+
+            <a
+              href="https://www.youtube.com/@TheMilanKotarlic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__social-link"
+            >
               <FaYoutube />
             </a>
           </div>
@@ -45,15 +71,17 @@ const Footer = () => {
           <div className="footer__contact-info">
             <div className="footer__contact-item">
               <FaEnvelope className="footer__contact-icon" />
-              <span>email@squareup.com</span>
+              <span>milan.kotarlicsc21@gmail.com</span>
             </div>
+
             <div className="footer__contact-item">
               <FaPhone className="footer__contact-icon" />
-              <span>+1 234 567 890</span>
+              <span>+381 60 0118254</span>
             </div>
+
             <div className="footer__contact-item">
               <FaMapMarkerAlt className="footer__contact-icon" />
-              <span>123 Business Street, City</span>
+              <span>Backa Palanka</span>
             </div>
           </div>
         </div>

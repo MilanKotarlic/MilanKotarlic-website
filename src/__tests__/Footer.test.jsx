@@ -37,10 +37,10 @@ describe('Footer Component', () => {
   test('renders footer with logo', () => {
     renderFooter();
     
-    const logo = screen.getByAltText('SquareUp');
+    const logo = screen.getByAltText('Milan');
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute('src', '/images/Logo.png');
-    expect(screen.getByText('SquareUp')).toBeInTheDocument();
+    expect(logo).toHaveAttribute('src', '/images/Milan.jpg');
+    expect(screen.getByText('Milan Kotarlic')).toBeInTheDocument();
   });
 
   test('renders navigation links', () => {
@@ -49,8 +49,6 @@ describe('Footer Component', () => {
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('Gallery')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
-    expect(screen.getByText('Why Choose')).toBeInTheDocument();
-    expect(screen.getByText('Services')).toBeInTheDocument();
   });
 
   test('navigation links have correct URLs', () => {
@@ -82,9 +80,9 @@ describe('Footer Component', () => {
   test('renders contact information', () => {
     renderFooter();
     
-    expect(screen.getByText('email@squareup.com')).toBeInTheDocument();
-    expect(screen.getByText('+1 234 567 890')).toBeInTheDocument();
-    expect(screen.getByText('123 Business Street, City')).toBeInTheDocument();
+    expect(screen.getByText('milan.kotarlicsc21@gmail.com')).toBeInTheDocument();
+    expect(screen.getByText('+381 60 0118254')).toBeInTheDocument();
+    expect(screen.getByText('Backa Palanka')).toBeInTheDocument();
   });
 
   test('renders contact icons', () => {
@@ -107,11 +105,11 @@ describe('Footer Component', () => {
     expect(container.querySelector('.footer__social')).toBeInTheDocument();
   });
 
-  test('renders "Stay Connected" heading', () => {
+  test('renders "Follow My Music" heading', () => {
     renderFooter();
     
-    expect(screen.getByText('Stay Connected')).toBeInTheDocument();
-    expect(screen.getByText('Stay Connected')).toHaveClass('footer__stay-connected');
+    expect(screen.getByText('Follow My Music')).toBeInTheDocument();
+    expect(screen.getByText('Follow My Music')).toHaveClass('footer__stay-connected');
   });
 
   test('contact items have icons', () => {

@@ -17,7 +17,6 @@
 
   &__logo {
     &-outer {
-      width: 118.48px;
       height: 40px;
       display: flex;
       align-items: center;
@@ -26,7 +25,7 @@
     &-container {
       width: 40.19px;
       height: 40px;
-      background: #9eff00;
+      background: var(--color-accent);
       border-radius: 5px;
       display: flex;
       align-items: center;
@@ -35,11 +34,12 @@
     }
 
     &-image {
-      width: 25.54px;
-      height: 28.73px;
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 5.63px;
       left: 7.32px;
+      border-radius: 5px;
     }
 
     &-text {
@@ -47,6 +47,7 @@
       font-size: 1rem;
       color: var(--color-text-primary);
       font-weight: bold;
+      margin-left: 20px;
     }
   }
 
