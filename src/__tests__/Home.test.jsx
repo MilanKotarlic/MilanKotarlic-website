@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Home from '../pages/Home/Home';
-
 
 jest.mock('../store', () => ({
   useStore: () => ({
@@ -17,49 +17,40 @@ jest.mock('../hooks/useLanguage', () => ({
     t: (key) => {
       const translations = {
         'hero.title': 'Welcome to Milan Kotarlić',
-        'hero.subtitle': 'Digital Creator & Software Engineer',
-        'hero.primaryButton': 'View My Work',
-        'hero.secondaryButton': 'Contact Me',
-        'services.title': 'My Services',
-        'services.subtitle': 'What I can do for you',
-        'services.design.title': 'UI/UX Design',
-        'services.design.description': 'Beautiful and functional designs',
-        'services.engineering.title': 'Software Engineering',
-        'services.engineering.description': 'Robust and scalable solutions',
-        'services.projectManagement.title': 'Project Management',
-        'services.projectManagement.description': 'End-to-end project delivery',
+        'hero.subtitle': 'Singer & Performer',
+        'hero.primaryButton': 'Listen Now',
+        'hero.secondaryButton': 'Book Me',
+
+        'services.title': 'My Music Services',
+        'services.subtitle': 'What I offer',
+        'services.design.title': 'Live Performances',
+        'services.design.description': 'Professional performances for all events',
+        'services.engineering.title': 'Private Events',
+        'services.engineering.description': 'Weddings, birthdays, and corporate events',
+        'services.projectManagement.title': 'Studio Sessions',
+        'services.projectManagement.description': 'High-quality vocal recordings',
         'services.learnMore': 'Learn More',
-        'whyChoose.title': 'Why Choose Me',
-        'whyChoose.subtitle': 'What sets me apart',
-        'whyChoose.expertise.title': 'Expertise',
-        'whyChoose.expertise.description': 'Years of experience',
-        'whyChoose.clientCentric.title': 'Client-Centric',
-        'whyChoose.clientCentric.description': 'Focus on your needs',
-        'whyChoose.resultsDriven.title': 'Results-Driven',
-        'whyChoose.resultsDriven.description': 'Delivering value',
-        'whyChoose.collaborative.title': 'Collaborative',
-        'whyChoose.collaborative.description': 'Working together',
-        'contact.title': 'Let\'s Work Together',
-        'contact.subtitle': 'Start your project today',
-        'contact.startProject': 'Start Project'
+
+        'whyChoose.title': 'Why Follow My Music',
+        'whyChoose.subtitle': 'What makes my music special',
+        'whyChoose.expertise.title': 'Experience',
+        'whyChoose.expertise.description': 'Years of performing live',
+        'whyChoose.clientCentric.title': 'Authenticity',
+        'whyChoose.clientCentric.description': 'Music from the heart',
+        'whyChoose.resultsDriven.title': 'Energy',
+        'whyChoose.resultsDriven.description': 'Unforgettable atmosphere',
+        'whyChoose.collaborative.title': 'Connection',
+        'whyChoose.collaborative.description': 'Building memories together',
+
+        'contact.title': "Let's Work Together",
+        'contact.subtitle': 'Book your event today',
+        'contact.startProject': 'Book Now'
       };
+
       return translations[key];
     }
   })
 }));
-
-jest.mock('../pages/Home/Hero/Hero', () => {
-  return function MockHero({ title, subtitle, primaryButton, secondaryButton }) {
-    return (
-      <div data-testid="hero">
-        <h1>{title}</h1>
-        <p>{subtitle}</p>
-        <button>{primaryButton}</button>
-        <button>{secondaryButton}</button>
-      </div>
-    );
-  };
-});
 
 jest.mock('../components/shared/Services/Services', () => {
   return function MockServices({ title, subtitle, children }) {
@@ -97,96 +88,100 @@ jest.mock('../components/shared/Contact/Contact', () => {
   };
 });
 
+const renderHome = () =>
+  render(
+    <MemoryRouter>
+      <Home />
+    </MemoryRouter>
+  );
+
 describe('Home Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   test('renders all main sections', () => {
-    render(<Home />);
-    
-    expect(screen.getByTestId('hero')).toBeInTheDocument();
+    renderHome();
+
     expect(screen.getByTestId('services')).toBeInTheDocument();
     expect(screen.getByTestId('why-choose')).toBeInTheDocument();
     expect(screen.getByTestId('contact')).toBeInTheDocument();
   });
 
   test('passes correct props to Hero component', () => {
-    render(<Home />);
-    
-    const hero = screen.getByTestId('hero');
-    expect(hero).toHaveTextContent('Welcome to Milan Kotarlić');
-    expect(hero).toHaveTextContent('Digital Creator & Software Engineer');
-    expect(hero).toHaveTextContent('View My Work');
-    expect(hero).toHaveTextContent('Contact Me');
+    renderHome();
+
+    expect(screen.getByText('Welcome to Milan Kotarlić')).toBeInTheDocument();
+    expect(screen.getByText('Singer & Performer')).toBeInTheDocument();
+    expect(screen.getByText('Listen Now')).toBeInTheDocument();
+    expect(screen.getByText('Book Me')).toBeInTheDocument();
   });
 
   test('passes correct props to Services component', () => {
-    render(<Home />);
-    
+    renderHome();
+
     const services = screen.getByTestId('services');
-    expect(services).toHaveTextContent('My Services');
-    expect(services).toHaveTextContent('What I can do for you');
+    expect(services).toHaveTextContent('My Music Services');
+    expect(services).toHaveTextContent('What I offer');
   });
 
   test('renders service cards with correct content', () => {
-    render(<Home />);
-    
-    expect(screen.getByText('UI/UX Design')).toBeInTheDocument();
-    expect(screen.getByText('Beautiful and functional designs')).toBeInTheDocument();
-    
-    expect(screen.getByText('Software Engineering')).toBeInTheDocument();
-    expect(screen.getByText('Robust and scalable solutions')).toBeInTheDocument();
-    
-    expect(screen.getByText('Project Management')).toBeInTheDocument();
-    expect(screen.getByText('End-to-end project delivery')).toBeInTheDocument();
+    renderHome();
+
+    expect(screen.getByText('Live Performances')).toBeInTheDocument();
+    expect(screen.getByText('Professional performances for all events')).toBeInTheDocument();
+
+    expect(screen.getByText('Private Events')).toBeInTheDocument();
+    expect(screen.getByText('Weddings, birthdays, and corporate events')).toBeInTheDocument();
+
+    expect(screen.getByText('Studio Sessions')).toBeInTheDocument();
+    expect(screen.getByText('High-quality vocal recordings')).toBeInTheDocument();
   });
 
   test('passes correct props to WhyChoose component', () => {
-    render(<Home />);
-    
+    renderHome();
+
     const whyChoose = screen.getByTestId('why-choose');
-    expect(whyChoose).toHaveTextContent('Why Choose Me');
-    expect(whyChoose).toHaveTextContent('What sets me apart');
+    expect(whyChoose).toHaveTextContent('Why Follow My Music');
+    expect(whyChoose).toHaveTextContent('What makes my music special');
   });
 
-  test('renders why choose cards with correct content', () => {
-    render(<Home />);
-    
-    expect(screen.getByText('Expertise')).toBeInTheDocument();
-    expect(screen.getByText('Years of experience')).toBeInTheDocument();
-    
-    expect(screen.getByText('Client-Centric')).toBeInTheDocument();
-    expect(screen.getByText('Focus on your needs')).toBeInTheDocument();
-    
-    expect(screen.getByText('Results-Driven')).toBeInTheDocument();
-    expect(screen.getByText('Delivering value')).toBeInTheDocument();
-    
-    expect(screen.getByText('Collaborative')).toBeInTheDocument();
-    expect(screen.getByText('Working together')).toBeInTheDocument();
+  test('renders Why Follow My Music cards with correct content', () => {
+    renderHome();
+
+    expect(screen.getByText('Experience')).toBeInTheDocument();
+    expect(screen.getByText('Years of performing live')).toBeInTheDocument();
+
+    expect(screen.getByText('Authenticity')).toBeInTheDocument();
+    expect(screen.getByText('Music from the heart')).toBeInTheDocument();
+
+    expect(screen.getByText('Energy')).toBeInTheDocument();
+    expect(screen.getByText('Unforgettable atmosphere')).toBeInTheDocument();
+
+    expect(screen.getByText('Connection')).toBeInTheDocument();
+    expect(screen.getByText('Building memories together')).toBeInTheDocument();
   });
 
   test('passes correct props to Contact component', () => {
-    render(<Home />);
-    
+    renderHome();
+
     const contact = screen.getByTestId('contact');
     expect(contact).toHaveTextContent("Let's Work Together");
-    expect(contact).toHaveTextContent('Start your project today');
-    expect(contact).toHaveTextContent('Start Project');
+    expect(contact).toHaveTextContent('Book your event today');
+    expect(contact).toHaveTextContent('Book Now');
   });
 
   test('has correct CSS classes', () => {
-    const { container } = render(<Home />);
-    
+    const { container } = renderHome();
     expect(container.querySelector('.home')).toBeInTheDocument();
   });
 
   test('service cards have buttons', () => {
-    render(<Home />);
-    
+    renderHome();
+
     const learnMoreButtons = screen.getAllByText('Learn More');
     expect(learnMoreButtons).toHaveLength(3);
-    
+
     learnMoreButtons.forEach(button => {
       expect(button).toHaveClass('services__button');
     });

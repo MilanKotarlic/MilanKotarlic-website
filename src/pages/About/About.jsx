@@ -1,16 +1,16 @@
 import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
-import { FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaLinkedin, FaTiktok, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import '../../styles/components/about.scss';
 
 const About = () => {
   const { t } = useLanguage();
 
   const links = [
-    { icon: <FaLinkedin />, label: t('about.linkedin'), url: 'https://linkedin.com' },
-    { icon: <FaGithub />, label: t('about.github'), url: 'https://github.com/MilanKotarlic' },
+    { icon: <FaLinkedin />, label: t('about.linkedin'), url: 'https://www.linkedin.com/in/milan-kotarlic-a723a396/' },
     { icon: <FaFacebook />, label: t('about.facebook'), url: 'https://www.facebook.com/KotarlicMilan' },
-    { icon: <FaInstagram />, label: t('about.instagram'), url: 'https://instagram.com' },
+    { icon: <FaInstagram />, label: t('about.instagram'), url: 'https://www.instagram.com/milan_kotarlic/' },
+    { icon: <FaTiktok />, label: t('about.tiktok'), url: 'https://www.tiktok.com/@chika_m1lan' },
   ];
 
   return (
@@ -57,7 +57,7 @@ const About = () => {
             <h3 className="about__subheading">{t('about.products')}</h3>
             <div className="about__products">
               <a 
-                href="https://youtube.com"
+                href="https://www.youtube.com/@TheMilanKotarlic"
                 className="about__youtube-link"
                 target="_blank"
                 rel="noopener noreferrer"

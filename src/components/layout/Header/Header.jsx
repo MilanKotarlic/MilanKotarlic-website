@@ -5,7 +5,7 @@ import { useLanguage } from '../../../hooks/useLanguage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { state, dispatch } = useStore();
+  const { dispatch } = useStore();
   const { t } = useLanguage();
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -16,9 +16,9 @@ const Header = () => {
         <div className="header__logo">
           <div className="header__logo-outer">
             <div className="header__logo-container">
-              <img src="/images/Logo.png" alt="SquareUp" className="header__logo-image" />
+              <img src="/images/Milan.jpg" alt="Milan" className="header__logo-image" />
             </div>
-            <span className="header__logo-text">SquareUp</span>
+            <span className="header__logo-text">Milan Kotarlic</span>
           </div>
         </div>
 

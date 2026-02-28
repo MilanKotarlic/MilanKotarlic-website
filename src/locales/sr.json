@@ -1,81 +1,81 @@
 {
   "hero": {
-    "title": "Digitalni Produkt Studio koji će Raditi",
-    "subtitle": "Za startupove, leaders enterprise, medije & izdavače, i društveno dobro.",
-    "primaryButton": "Kontaktirajte Nas",
-    "secondaryButton": "Naši Radovi"
+    "title": "Muzika. Energija. Strast.",
+    "subtitle": "Multiinstrumentalista koji iz kućnog studija snima covere i nastupe. Na jednom mestu možeš pronaći svu moju muziku i profile.",
+    "primaryButton": "Pogledaj Video",
+    "secondaryButton": "Zaprati Me"
   },
   "services": {
-    "title": "Moje Usluge",
-    "subtitle": "Profesionalna rešenja za vaš biznis",
+    "title": "Šta Radim",
+    "subtitle": "Muzika je moj glavni jezik",
     "design": {
-      "title": "Dizajn",
-      "description": "U Squareup-u, naš dizajn tim je strastven u stvaranju zadivljujućih, korisničkih orijentisanih dizajna koji osvajaju vašu publiku i podižu vaš brend. Verujemo da odličan dizajn nije samo pitanje estetike; radi se o stvaranju neprimetnih i intuitivnih korisničkih iskustava."
+      "title": "Gitara",
+      "description": "Sviram električnu i akustičnu gitaru – ritam i solo deonice, najčešće kroz rock i pop covere. Volim da rekreiram ton, ali i da dodam lični pečat."
     },
     "engineering": {
-      "title": "Inženjerstvo",
-      "description": "Naš inženjerski tim kombinuje tehničku ekspertizu sa strašću za inovacijama kako bi izgradio stabilna i prilagodljiva digitalna rešenja. Koristimo najnovije tehnologije i najbolje prakse za isporuku aplikacija visokih performansi prilagođenih vašim specifičnim potrebama."
+      "title": "Bubnjevi",
+      "description": "Bubnjevi su mesto gde izbacujem najviše energije. Snimam groove orijentisane deonice, čvrste ritmove i dinamične prelaze u svom kućnom studiju."
     },
     "projectManagement": {
-      "title": "Upravljanje Projektima",
-      "description": "Naš iskusan tim za upravljanje projektima osigurava da se vaši projekti isporuče na vreme, u okviru budžeta i u skladu sa vašim specifikacijama. Pratimo industrijske standardne metodologije i koristimo efikasne alate za komunikaciju i saradnju kako bismo vas održavali informisanim tokom celog procesa razvoja."
+      "title": "Vokal i Produkcija",
+      "description": "Pevač sam i samostalno snimam svoje performanse. U kućnom studiju radim snimanje, layering i osnovnu produkciju kako bih svaku pesmu oživeo na svoj način."
     },
-    "learnMore": "Saznaj Više"
+    "learnMore": "Istraži više"
   },
   "whyChoose": {
-    "title": "Zašto Izabrati Mene",
-    "subtitle": "Iskustvo i kvalitet kojima možete verovati",
+    "title": "Zašto da pratiš moju muziku",
+    "subtitle": "Pravi instrumenti. Pravi nastupi. Prava energija.",
     "expertise": {
-      "title": "Stručnost",
-      "description": "Naš tim čine visokokvalifikovani profesionalci koji duboko razumeju digitalni krajolik. Pratimo najnovije trendove u industriji i najbolje prakse kako bismo isporučili vrhunska rešenja."
+      "title": "Multiinstrumentalista",
+      "description": "Sviram više instrumenata, što mi daje širu perspektivu u muzici i omogućava kompletniji i kvalitetniji zvuk u svakom coveru."
     },
     "clientCentric": {
-      "title": "Klijentima Usmeren Pristup",
-      "description": "Dajemo prioritet našim klijentima i njihovim jedinstvenim potrebama. Slušamo vaše ideje, izazove i ciljeve, i prilagođavamo naše usluge da ispunimo vaše specifične zahteve. Vaš uspeh je naš uspeh."
+      "title": "Kućni studio",
+      "description": "Sav sadržaj nastaje u mom ličnom studiju, gde eksperimentišem sa tonom, aranžmanima i stilom izvođenja."
     },
     "resultsDriven": {
-      "title": "Rezultatima Usmerena Rešenja",
-      "description": "Naš primarni fokus je na isporuci rezultata. Kombinujemo kreativnost i tehničku stručnost kako bismo kreirali digitalne proizvode koji pokreću poslovni rast, poboljšavaju korisnička iskustava i pružaju konkurentsku prednost."
+      "title": "Kontinuirani sadržaj",
+      "description": "Redovno objavljujem nove covere i nastupe, uz stalno unapređivanje tehnike, zvuka i produkcije."
     },
     "collaborative": {
-      "title": "Partnerska Saradnja",
-      "description": "Cenimo dugoročne odnose sa našim klijentima. Vidimo se kao vaš digitalni partner, pružajući kontinuiranu podršku, održavanje i ažuriranja kako bismo osigurali da vaši digitalni proizvodi nastave da napreduju."
+      "title": "Sve platforme na jednom mestu",
+      "description": "Ovaj sajt povezuje moj YouTube, Instagram, Facebook, TikTok, LinkedIn i druge mreže – da me možeš lako pratiti i podržati."
     }
   },
   "contact": {
-    "title": "Kontaktirajte Nas",
-    "subtitle": "Hvala vam što ste zainteresovani za SquareUp. Rado bismo čuli od vas i razgovarali o tome kako možemo pomoći da oživite vaše digitalne ideje.",
-    "startProject": "Započni Projekt"
+    "title": "Hajde da se povežemo",
+    "subtitle": "Ako ti se dopada moja muzika, želiš saradnju ili samo da se javiš – piši slobodno.",
+    "startProject": "Kontaktiraj me"
   },
   "navigation": {
     "home": "Početna",
-    "about": "O Meni",
+    "about": "O meni",
     "gallery": "Galerija",
     "contact": "Kontakt"
   },
   "gallery": {
-  "title": "Moja Muzika", 
-  "subtitle": "Ovde možete pronaći sve moje najnovije muzičke spotove i izvođenja",
-  "videos": {
-    "video1": {
-      "title": "Milan Kotarlić - Pesma 1"
-    },
-    "video2": {
-      "title": "Milan Kotarlić - Pesma 2"
-    },
-    "video3": {
-      "title": "Milan Kotarlić - Pesma 3"
+    "title": "Moja Muzika",
+    "subtitle": "Najnoviji coveri i nastupi sa mog YouTube kanala",
+    "videos": {
+      "video1": {
+        "title": "Guitar Cover"
+      },
+      "video2": {
+        "title": "Drum Cover"
+      },
+      "video3": {
+        "title": "Vokal & Full Band Cover"
+      }
     }
-  }
-},
+  },
   "about": {
     "title": "O meni",
     "greeting": "Zdravo, ja sam Milan",
-    "description": "Strastveni digitalni kreator sa ekspertizom u web developmentu, dizajnu i kreiranju sadržaja. Volim da pretvaram ideje u stvarnost kroz kod i kreativnost.",
+    "description": "Strastveni sam multiinstrumentalista i pevač. Snimam i produciram muziku iz svog kućnog studija, a najčešće radim covere. Sviram gitaru, bubnjeve i pevam. Ovaj sajt je centralno mesto gde možeš pronaći svu moju muziku i povezati se sa mnom na svim platformama.",
     "links": "Moji linkovi",
-    "products": "Moji proizvodi",
+    "products": "Moja muzika",
     "youtubeChannel": "YouTube kanal",
-    "youtubeDescription": "Pogledajte moje najnovije video tutorijale o web developmentu, dizajnu i tehnologiji.",
+    "youtubeDescription": "Pogledaj moje najnovije covere, kompletne nastupe i studijska snimanja.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "facebook": "Facebook",
@@ -83,18 +83,18 @@
   },
   "contactPage": {
     "title": "Kontakt",
-    "subtitle": "Javite mi se za saradnju, projekte ili samo da pozdravite!",
-    "letsWork": "Zajedno da radimo",
-    "projectDescription": "Imate ideju za projekat? Hajde da razgovaramo kako možemo da je ostvarimo.",
-    "startProject": "Započni projektat",
+    "subtitle": "Otvoren sam za saradnje, muzičke projekte ili jednostavno povezivanje sa drugim muzičarima.",
+    "letsWork": "Hajde da napravimo nešto zajedno",
+    "projectDescription": "Imaš ideju za saradnju, pesmu ili nastup? Piši mi da se dogovorimo.",
+    "startProject": "Pošalji poruku",
     "email": "Email",
     "phone": "Telefon",
     "location": "Lokacija",
     "connect": "Povežimo se",
-    "sendMessage": "Pošaljite mi poruku",
-    "namePlaceholder": "Vaše ime",
-    "emailPlaceholder": "Vaš email",
-    "messagePlaceholder": "Vaša poruka",
-    "sendButton": "Pošalji poruku"
+    "sendMessage": "Pošalji mi poruku",
+    "namePlaceholder": "Tvoje ime",
+    "emailPlaceholder": "Tvoj email",
+    "messagePlaceholder": "Tvoja poruka",
+    "sendButton": "Pošalji"
   }
 }

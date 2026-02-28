@@ -29,8 +29,6 @@ const ContactPage = () => {
                   {t('contactPage.projectDescription')}
                 </p>
               </div>
-
-              <button className="contact__header-button">{t('contactPage.startProject')}</button>
             </div>
 
             <div className="contact__info">
@@ -39,7 +37,7 @@ const ContactPage = () => {
                   <FaEnvelope />
                 </div>
                 <h3>{t('contactPage.email')}</h3>
-                <p>hello@milan.com</p>
+                <p>milan.kotarlicsc21@gmail.com</p>
               </div>
 
               <div className="contact__info-item">
@@ -55,29 +53,25 @@ const ContactPage = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <h3>{t('contactPage.location')}</h3>
-                <p>Belgrade, Serbia</p>
+                <p>Serbia</p>
               </div>
 
               <div className="contact__info-item contact__info-item--social">
                 <h3>{t('contactPage.connect')}</h3>
                 <div className="contact__social-links">
-                  <a href="#" className="contact__social-link">
+                  <a href="https://www.linkedin.com/in/milan-kotarlic-a723a396/" target="_blank" className="contact__social-link">
                     <FaLinkedin />
                     <span>{t('about.linkedin')}</span>
                   </a>
-                  <a href="#" className="contact__social-link">
-                    <FaTwitter />
-                    <span>Twitter</span>
-                  </a>
-                  <a href="#" className="contact__social-link">
+                  <a href="https://www.instagram.com/milan_kotarlic/" className="contact__social-link">
                     <FaInstagram />
                     <span>{t('about.instagram')}</span>
                   </a>
-                  <a href="#" className="contact__social-link">
+                  <a href="https://www.facebook.com/KotarlicMilan" className="contact__social-link">
                     <FaFacebook />
                     <span>{t('about.facebook')}</span>
                   </a>
-                  <a href="#" className="contact__social-link">
+                  <a href="https://www.youtube.com/@TheMilanKotarlic" className="contact__social-link">
                     <FaYoutube />
                     <span>{t('about.youtubeChannel')}</span>
                   </a>
@@ -86,8 +80,8 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-
-        <div className="contact-page__form-container">
+        {/* There is no sevice for sending messages, lets comment it out for now */}
+        {/* <div className="contact-page__form-container">
           <h2 className="contact-page__form-title">{t('contactPage.sendMessage')}</h2>
           <form className="contact-page__form">
             <div className="contact-page__form-group">
@@ -101,7 +95,7 @@ const ContactPage = () => {
             </div>
             <button type="submit" className="contact-page__submit-button">{t('contactPage.sendButton')}</button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

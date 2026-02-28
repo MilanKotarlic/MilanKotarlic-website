@@ -50,10 +50,10 @@ describe('Header Component', () => {
   test('renders header with logo', () => {
     renderHeader();
     
-    const logo = screen.getByAltText('SquareUp');
+    const logo = screen.getByAltText('Milan');
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute('src', '/images/Logo.png');
-    expect(screen.getByText('SquareUp')).toBeInTheDocument();
+    expect(logo).toHaveAttribute('src', '/images/Milan.jpg');
+    expect(screen.getByText('Milan Kotarlic')).toBeInTheDocument();
   });
 
   test('renders language switcher buttons', () => {
@@ -206,7 +206,7 @@ describe('Header Component', () => {
     
     const logoText = container.querySelector('.header__logo-text');
     expect(logoText).toBeInTheDocument();
-    expect(logoText).toHaveTextContent('SquareUp');
+    expect(logoText).toHaveTextContent('Milan Kotarlic');
   });
 
   test('mobile nav is hidden by default', () => {

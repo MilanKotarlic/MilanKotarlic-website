@@ -52,23 +52,19 @@ describe('Contact Page', () => {
     })).toBeInTheDocument();
     
     expect(screen.getByText('Have a project in mind? Let\'s discuss how we can bring your ideas to life.')).toBeInTheDocument();
-    
-    const startProjectButton = screen.getByRole('button', { name: 'Start a Project' });
-    expect(startProjectButton).toBeInTheDocument();
-    expect(startProjectButton).toHaveClass('contact__header-button');
   });
 
   test('renders contact information with icons', () => {
     render(<ContactPage />);
     
     expect(screen.getByText('Email')).toBeInTheDocument();
-    expect(screen.getByText('hello@milan.com')).toBeInTheDocument();
+    expect(screen.getByText('milan.kotarlicsc21@gmail.com')).toBeInTheDocument();
     
     expect(screen.getByText('Phone')).toBeInTheDocument();
     expect(screen.getByText('+381 64 123 4567')).toBeInTheDocument();
     
     expect(screen.getByText('Location')).toBeInTheDocument();
-    expect(screen.getByText('Belgrade, Serbia')).toBeInTheDocument();
+    expect(screen.getByText('Serbia')).toBeInTheDocument();
   });
 
   test('renders social links with correct labels', () => {
@@ -77,52 +73,51 @@ describe('Contact Page', () => {
     expect(screen.getByText('Connect With Me')).toBeInTheDocument();
     
     expect(screen.getByText('LinkedIn')).toBeInTheDocument();
-    expect(screen.getByText('Twitter')).toBeInTheDocument();
     expect(screen.getByText('Instagram')).toBeInTheDocument();
     expect(screen.getByText('Facebook')).toBeInTheDocument();
     expect(screen.getByText('YouTube Channel')).toBeInTheDocument();
   });
 
-  test('renders contact form with all fields', () => {
-    render(<ContactPage />);
+  // test('renders contact form with all fields', () => {
+  //   render(<ContactPage />);
     
-    expect(screen.getByRole('heading', { 
-      name: 'Send me a message', 
-      level: 2 
-    })).toBeInTheDocument();
+  //   expect(screen.getByRole('heading', { 
+  //     name: 'Send me a message', 
+  //     level: 2 
+  //   })).toBeInTheDocument();
     
-    const nameInput = screen.getByPlaceholderText('Your Name');
-    const emailInput = screen.getByPlaceholderText('Your Email');
-    const messageTextarea = screen.getByPlaceholderText('Your Message');
-    const submitButton = screen.getByRole('button', { name: 'Send Message' });
+  //   const nameInput = screen.getByPlaceholderText('Your Name');
+  //   const emailInput = screen.getByPlaceholderText('Your Email');
+  //   const messageTextarea = screen.getByPlaceholderText('Your Message');
+  //   const submitButton = screen.getByRole('button', { name: 'Send Message' });
     
-    expect(nameInput).toBeInTheDocument();
-    expect(emailInput).toBeInTheDocument();
-    expect(messageTextarea).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
+  //   expect(nameInput).toBeInTheDocument();
+  //   expect(emailInput).toBeInTheDocument();
+  //   expect(messageTextarea).toBeInTheDocument();
+  //   expect(submitButton).toBeInTheDocument();
     
-    expect(nameInput).toHaveClass('contact-page__input');
-    expect(emailInput).toHaveClass('contact-page__input');
-    expect(messageTextarea).toHaveClass('contact-page__textarea');
-    expect(submitButton).toHaveClass('contact-page__submit-button');
-  });
+  //   expect(nameInput).toHaveClass('contact-page__input');
+  //   expect(emailInput).toHaveClass('contact-page__input');
+  //   expect(messageTextarea).toHaveClass('contact-page__textarea');
+  //   expect(submitButton).toHaveClass('contact-page__submit-button');
+  // });
 
-  test('allows typing in form fields', async () => {
-    const user = userEvent.setup();
-    render(<ContactPage />);
+  // test('allows typing in form fields', async () => {
+  //   const user = userEvent.setup();
+  //   render(<ContactPage />);
     
-    const nameInput = screen.getByPlaceholderText('Your Name');
-    const emailInput = screen.getByPlaceholderText('Your Email');
-    const messageTextarea = screen.getByPlaceholderText('Your Message');
+  //   const nameInput = screen.getByPlaceholderText('Your Name');
+  //   const emailInput = screen.getByPlaceholderText('Your Email');
+  //   const messageTextarea = screen.getByPlaceholderText('Your Message');
     
-    await user.type(nameInput, 'John Doe');
-    await user.type(emailInput, 'john@example.com');
-    await user.type(messageTextarea, 'Hello, I would like to work with you!');
+  //   await user.type(nameInput, 'John Doe');
+  //   await user.type(emailInput, 'john@example.com');
+  //   await user.type(messageTextarea, 'Hello, I would like to work with you!');
     
-    expect(nameInput).toHaveValue('John Doe');
-    expect(emailInput).toHaveValue('john@example.com');
-    expect(messageTextarea).toHaveValue('Hello, I would like to work with you!');
-  });
+  //   expect(nameInput).toHaveValue('John Doe');
+  //   expect(emailInput).toHaveValue('john@example.com');
+  //   expect(messageTextarea).toHaveValue('Hello, I would like to work with you!');
+  // });
 
   test('renders logo image with correct attributes', () => {
     render(<ContactPage />);
@@ -137,26 +132,26 @@ describe('Contact Page', () => {
     const { container } = render(<ContactPage />);
     
     const socialLinks = container.querySelectorAll('.contact__social-link');
-    expect(socialLinks.length).toBe(5);
+    expect(socialLinks.length).toBe(4);
     
     const linkedinLink = screen.getByText('LinkedIn').closest('a');
-    expect(linkedinLink).toHaveAttribute('href', '#');
+    expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/milan-kotarlic-a723a396/');
     
     const youtubeLink = screen.getByText('YouTube Channel').closest('a');
-    expect(youtubeLink).toHaveAttribute('href', '#');
+    expect(youtubeLink).toHaveAttribute('href', 'https://www.youtube.com/@TheMilanKotarlic');
   });
 
-  test('contact form has correct input types and attributes', () => {
-    render(<ContactPage />);
+  // test('contact form has correct input types and attributes', () => {
+  //   render(<ContactPage />);
     
-    const nameInput = screen.getByPlaceholderText('Your Name');
-    const emailInput = screen.getByPlaceholderText('Your Email');
-    const messageTextarea = screen.getByPlaceholderText('Your Message');
+  //   const nameInput = screen.getByPlaceholderText('Your Name');
+  //   const emailInput = screen.getByPlaceholderText('Your Email');
+  //   const messageTextarea = screen.getByPlaceholderText('Your Message');
     
-    expect(nameInput).toHaveAttribute('type', 'text');
-    expect(emailInput).toHaveAttribute('type', 'email');
-    expect(messageTextarea).toHaveAttribute('rows', '5');
-  });
+  //   expect(nameInput).toHaveAttribute('type', 'text');
+  //   expect(emailInput).toHaveAttribute('type', 'email');
+  //   expect(messageTextarea).toHaveAttribute('rows', '5');
+  // });
 
   test('contact info items have correct icons', () => {
     const { container } = render(<ContactPage />);
@@ -177,7 +172,7 @@ describe('Contact Page', () => {
       link.classList.contains('contact__social-link')
     );
     
-    expect(socialLinks).toHaveLength(5);
+    expect(socialLinks).toHaveLength(4);
     
     socialLinks.forEach(link => {
       const icon = link.querySelector('svg');
@@ -191,13 +186,7 @@ describe('Contact Page', () => {
     const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
     
     render(<ContactPage />);
-    
-    const startProjectButton = screen.getByRole('button', { name: 'Start a Project' });
-    expect(startProjectButton).toBeInTheDocument();
-    expect(startProjectButton).toHaveClass('contact__header-button');
-    
-    await user.click(startProjectButton);
-    
+        
     consoleSpy.mockRestore();
   });
 
@@ -208,11 +197,12 @@ describe('Contact Page', () => {
     expect(container.querySelector('.contact-page__container')).toBeInTheDocument();
     expect(container.querySelector('.contact')).toBeInTheDocument();
     expect(container.querySelector('.contact__container')).toBeInTheDocument();
-    expect(container.querySelector('.contact-page__form-container')).toBeInTheDocument();
+    // commented out because we need a service for sending mails
+    // expect(container.querySelector('.contact-page__form-container')).toBeInTheDocument();
     
     const socialLinksContainer = container.querySelector('.contact__social-links');
     expect(socialLinksContainer).toBeInTheDocument();
-    expect(socialLinksContainer.children).toHaveLength(5);
+    expect(socialLinksContainer.children).toHaveLength(4);
   });
 
   test('logo image has fallback on error', () => {

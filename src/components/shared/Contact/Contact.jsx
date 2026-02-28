@@ -14,19 +14,17 @@ const Contact = ({ title, subtitle, startProject }) => {
             <h2 className="contact__title">{title}</h2>
             <p className="contact__subtitle">{subtitle}</p>
           </div>
-
-          <button className="contact__header-button">{startProject}</button>
         </div>
 
         <div className="contact__info">
           <div className="contact__info-item">
             <h3>Email</h3>
-            <p>hello@squareup.com</p>
+            <p>milan.kotarlicsc21@gmail.com</p>
           </div>
 
           <div className="contact__info-item">
             <h3>Phone</h3>
-            <p>+1 234 567 890</p>
+            <p>+381 60 0118254</p>
           </div>
 
           <div className="contact__info-item">

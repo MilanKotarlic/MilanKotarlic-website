@@ -38,7 +38,7 @@ class YouTubeService {
     }
   }
 
-  static async getPlaylistVideos(playlistId, maxResults = 12) {
+  static async getPlaylistVideos(playlistId, maxResults = 50) {
     try {
       const response = await fetch(
         `${BASE_URL}/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=${maxResults}&key=${API_KEY}`
