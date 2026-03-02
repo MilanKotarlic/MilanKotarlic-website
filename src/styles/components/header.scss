@@ -16,6 +16,8 @@
   }
 
   &__logo {
+    cursor: pointer;
+
     &-outer {
       height: 40px;
       display: flex;
@@ -63,10 +65,21 @@
     width: 46px;
     height: 46px;
     padding: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--color-accent);
+      
+      .header__hamburger-icon {
+        color: var(--color-text-primary);
+      }
+    }
 
     &-icon {
       width: 34px;
       height: 34px;
+      color: var(--color-text-secondary);
+      transition: color 0.3s ease;
     }
 
     @media (max-width: 768px) {

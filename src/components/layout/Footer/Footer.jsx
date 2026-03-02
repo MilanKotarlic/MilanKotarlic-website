@@ -6,12 +6,16 @@ import { FaFacebookF, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerA
 const Footer = () => {
   const { t } = useLanguage();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__top">
           <div className="footer__logo-section">
-            <div className="footer__logo">
+            <div className="footer__logo" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
               <img src="/images/Milan.jpg" alt="Milan" className="footer__logo-image" />
               <span className="footer__logo-text">Milan Kotarlic</span>
             </div>
@@ -71,12 +75,16 @@ const Footer = () => {
           <div className="footer__contact-info">
             <div className="footer__contact-item">
               <FaEnvelope className="footer__contact-icon" />
-              <span>milan.kotarlicsc21@gmail.com</span>
+              <a href="mailto:milan.kotarlicsc21@gmail.com" className="footer__contact-link">
+                milan.kotarlicsc21@gmail.com
+              </a>
             </div>
 
             <div className="footer__contact-item">
               <FaPhone className="footer__contact-icon" />
-              <span>+381 60 0118254</span>
+              <a href="tel:+381600118254" className="footer__contact-link">
+                +381 60 0118254
+              </a>
             </div>
 
             <div className="footer__contact-item">
@@ -85,6 +93,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+      
+        <button 
+          className="footer__back-to-top"
+          onClick={scrollToTop}
+          aria-label="Povratak na vrh"
+        >
+          ↑
+        </button>
       </div>
     </footer>
   );

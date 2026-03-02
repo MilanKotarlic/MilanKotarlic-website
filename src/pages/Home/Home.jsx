@@ -6,6 +6,15 @@ import WhyChoose from '../../components/shared/WhyChoose/WhyChoose';
 import Contact from '../../components/shared/Contact/Contact';
 import Button from '../../components/shared/Button/Button';
 import { Link } from 'react-router-dom';
+import { 
+  FaGuitar, 
+  FaDrum, 
+  FaMicrophone, 
+  FaMusic,
+  FaHome,
+  FaYoutube,
+  FaLink
+} from 'react-icons/fa';
 
 const Home = () => {
   const { state } = useStore();
@@ -25,15 +34,15 @@ const Home = () => {
             </div>
 
             <div className="hero__buttons">
-              <Link to="/contact" >
-              <Button variant="secondary" size="medium">
-                {t('hero.secondaryButton')}
-              </Button>
+              <Link to="/contact">
+                <Button variant="secondary" size="medium">
+                  {t('hero.secondaryButton')}
+                </Button>
               </Link>
               <Link to="/gallery">
-              <Button variant="primary" size="medium">
-                {t('hero.primaryButton')}
-              </Button>
+                <Button variant="primary" size="medium">
+                  {t('hero.primaryButton')}
+                </Button>
               </Link>
             </div>
           </div>
@@ -47,7 +56,7 @@ const Home = () => {
         <div className="services__card">
           <div className="services__card-header">
             <div className="services__icon">
-              <img src="/images/design.png" alt="Design" />
+              <FaGuitar className="services__icon-svg services__icon-svg--guitar" />
             </div>
             <h3 className="services__card-title">{t('services.design.title')}</h3>
           </div>
@@ -62,7 +71,7 @@ const Home = () => {
         <div className="services__card">
           <div className="services__card-header">
             <div className="services__icon">
-              <img src="/images/development.png" alt="Engineering" />
+              <FaDrum className="services__icon-svg services__icon-svg--drum" />
             </div>
             <h3 className="services__card-title">{t('services.engineering.title')}</h3>
           </div>
@@ -77,7 +86,7 @@ const Home = () => {
         <div className="services__card">
           <div className="services__card-header">
             <div className="services__icon">
-              <img src="/images/management.png" alt="Project Management" />
+              <FaMicrophone className="services__icon-svg services__icon-svg--microphone" />
             </div>
             <h3 className="services__card-title">{t('services.projectManagement.title')}</h3>
           </div>
@@ -97,11 +106,7 @@ const Home = () => {
         <div className="why-choose__card">
           <div className="why-choose__card-header">
             <div className="why-choose__icon">
-              <img
-                src="/images/expertise.svg"
-                alt="Expertise"
-                className="why-choose__icon-image"
-              />
+              <FaMusic className="why-choose__icon-svg why-choose__icon-svg--music" />
             </div>
             <h3 className="why-choose__card-title">{t('whyChoose.expertise.title')}</h3>
           </div>
@@ -115,11 +120,7 @@ const Home = () => {
         <div className="why-choose__card">
           <div className="why-choose__card-header">
             <div className="why-choose__icon">
-              <img
-                src="/images/client.svg"
-                alt="Client-Centric"
-                className="why-choose__icon-image"
-              />
+              <FaHome className="why-choose__icon-svg why-choose__icon-svg--home" />
             </div>
             <h3 className="why-choose__card-title">{t('whyChoose.clientCentric.title')}</h3>
           </div>
@@ -133,11 +134,7 @@ const Home = () => {
         <div className="why-choose__card">
           <div className="why-choose__card-header">
             <div className="why-choose__icon">
-              <img
-                src="/images/results.svg"
-                alt="Results-Driven"
-                className="why-choose__icon-image"
-              />
+              <FaYoutube className="why-choose__icon-svg why-choose__icon-svg--youtube" />
             </div>
             <h3 className="why-choose__card-title">{t('whyChoose.resultsDriven.title')}</h3>
           </div>
@@ -151,11 +148,7 @@ const Home = () => {
         <div className="why-choose__card">
           <div className="why-choose__card-header">
             <div className="why-choose__icon">
-              <img
-                src="/images/collaboration.svg"
-                alt="Collaborative"
-                className="why-choose__icon-image"
-              />
+              <FaLink className="why-choose__icon-svg why-choose__icon-svg--link" />
             </div>
             <h3 className="why-choose__card-title">{t('whyChoose.collaborative.title')}</h3>
           </div>

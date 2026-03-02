@@ -19,12 +19,16 @@ const Contact = ({ title, subtitle, startProject }) => {
         <div className="contact__info">
           <div className="contact__info-item">
             <h3>Email</h3>
-            <p>milan.kotarlicsc21@gmail.com</p>
+            <a href="mailto:milan.kotarlicsc21@gmail.com" className="contact__link">
+              milan.kotarlicsc21@gmail.com
+            </a>
           </div>
 
           <div className="contact__info-item">
             <h3>Phone</h3>
-            <p>+381 60 0118254</p>
+            <a href="tel:+381600118254" className="contact__link">
+              +381 60 0118254
+            </a>
           </div>
 
           <div className="contact__info-item">

@@ -184,6 +184,35 @@
   }
 }
 
+      .contact__link {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+  
+      &::after {
+      content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
+        box-shadow: 0 0 8px var(--primary);
+  }
+  
+      &:hover {
+        color: var(--primary);
+        text-shadow: 0 0 8px var(--primary);
+    
+      &::after {
+        width: 100%;
+    }
+  }
+}
+
+
 // TABLET
 @media (min-width: 768px) {
   .contact {
