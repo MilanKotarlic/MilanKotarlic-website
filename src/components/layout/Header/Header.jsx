@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useStore, setLanguage } from '../../../store';
 import { useLanguage } from '../../../hooks/useLanguage';
+import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { dispatch } = useStore();
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const goToHome = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header className="header">
       <div className="header__content">
-        <div className="header__logo">
+        <div className="header__logo" onClick={goToHome} style={{ cursor: 'pointer' }}>
           <div className="header__logo-outer">
             <div className="header__logo-container">
               <img src="/images/Milan.jpg" alt="Milan" className="header__logo-image" />
@@ -28,7 +35,7 @@ const Header = () => {
         </div>
 
         <button className="header__hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <img src="/images/Icon.png" alt="Menu" className="header__hamburger-icon" />
+          <FaBars className="header__hamburger-icon" />
         </button>
 
         <nav className="header__nav header__nav--desktop">

@@ -125,6 +125,14 @@
   }
 }
 
+  .services__icon-svg {
+  font-size: 2rem;
+  
+  &--guitar { color: #6366F1; }
+  &--drum { color: #8B5CF6; }
+  &--microphone { color: #EC4899; }
+}
+
 @media (min-width: 768px) {
   .services {
     &__cards {

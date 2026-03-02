@@ -20,7 +20,7 @@ const ContactPage = () => {
           <div className="contact__container">
             <div className="contact__header">
               <div className="contact__logo">
-                <img src="/images/Logo.png" alt="Logo" className="contact__logo-image" />
+                <img src="/images/Milan.jpg" alt="Logo" className="contact__logo-image" />
               </div>
 
               <div className="contact__text-container">
@@ -37,7 +37,9 @@ const ContactPage = () => {
                   <FaEnvelope />
                 </div>
                 <h3>{t('contactPage.email')}</h3>
-                <p>milan.kotarlicsc21@gmail.com</p>
+                <a href="mailto:milan.kotarlicsc21@gmail.com" className="contact__link">
+                  milan.kotarlicsc21@gmail.com
+                </a>
               </div>
 
               <div className="contact__info-item">
@@ -45,7 +47,9 @@ const ContactPage = () => {
                   <FaPhone />
                 </div>
                 <h3>{t('contactPage.phone')}</h3>
-                <p>+381 64 123 4567</p>
+                <a href="tel:+381600118254" className="contact__link">
+                  +381 60 0118254
+                </a>
               </div>
 
               <div className="contact__info-item">
@@ -59,19 +63,19 @@ const ContactPage = () => {
               <div className="contact__info-item contact__info-item--social">
                 <h3>{t('contactPage.connect')}</h3>
                 <div className="contact__social-links">
-                  <a href="https://www.linkedin.com/in/milan-kotarlic-a723a396/" target="_blank" className="contact__social-link">
+                  <a href="https://www.linkedin.com/in/milan-kotarlic-a723a396/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                     <FaLinkedin />
                     <span>{t('about.linkedin')}</span>
                   </a>
-                  <a href="https://www.instagram.com/milan_kotarlic/" className="contact__social-link">
+                  <a href="https://www.instagram.com/milan_kotarlic/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                     <FaInstagram />
                     <span>{t('about.instagram')}</span>
                   </a>
-                  <a href="https://www.facebook.com/KotarlicMilan" className="contact__social-link">
+                  <a href="https://www.facebook.com/KotarlicMilan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                     <FaFacebook />
                     <span>{t('about.facebook')}</span>
                   </a>
-                  <a href="https://www.youtube.com/@TheMilanKotarlic" className="contact__social-link">
+                  <a href="https://www.youtube.com/@TheMilanKotarlic" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                     <FaYoutube />
                     <span>{t('about.youtubeChannel')}</span>
                   </a>
