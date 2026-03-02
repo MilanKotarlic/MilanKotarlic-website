@@ -20,7 +20,7 @@ const ContactPage = () => {
           <div className="contact__container">
             <div className="contact__header">
               <div className="contact__logo">
-                <img src="/images/Logo.png" alt="Logo" className="contact__logo-image" />
+                <img src="/images/Milan.jpg" alt="Logo" className="contact__logo-image" />
               </div>
 
               <div className="contact__text-container">
