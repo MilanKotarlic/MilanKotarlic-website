@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import mockVideos from './mocks/videos.json' assert { type: 'json' };
+const BASE_URL = process.env.CI ? 'http://localhost:4173' : 'http://localhost:5174';
 
-const BASE_URL = 'http://localhost:5174';
 
 test.describe('Milan Kotarlić Website - E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
